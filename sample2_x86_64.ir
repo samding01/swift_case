@@ -1,0 +1,1030 @@
+; ModuleID = '-'
+source_filename = "-"
+target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+%TSD = type <{ %Ts24_VariantDictionaryBufferO }>
+%Ts24_VariantDictionaryBufferO = type <{ %Ts23_NativeDictionaryBufferV }>
+%Ts23_NativeDictionaryBufferV = type <{ %Ts27_RawNativeDictionaryStorageC* }>
+%Ts27_RawNativeDictionaryStorageC = type opaque
+%TSS = type <{ %Ts11_StringGutsV }>
+%Ts11_StringGutsV = type <{ %Ts13_StringObjectV, %TSu }>
+%Ts13_StringObjectV = type <{ %swift.bridge* }>
+%swift.bridge = type opaque
+%TSu = type <{ i64 }>
+%swift.type = type { i64 }
+%swift.protocol_conformance_descriptor = type { i32, i32, i32, i32 }
+%swift.generic_witness_table_cache = type { i16, i16, i32, i32, i32, i32, i32 }
+%swift.protocol = type { i8*, i8*, i8*, i8*, i8*, i8*, i8*, i8*, i32, i32, i32, i32, i32, i32 }
+%swift.opaque = type opaque
+%Ts6HasherV = type <{ %Ts16_BufferingHasherVys14_SipHash13CoreVG }>
+%Ts16_BufferingHasherVys14_SipHash13CoreVG = type <{ %Ts17_HasherTailBufferV, %Ts14_SipHash13CoreV }>
+%Ts17_HasherTailBufferV = type <{ %Ts6UInt64V }>
+%Ts6UInt64V = type <{ i64 }>
+%Ts14_SipHash13CoreV = type <{ %Ts13_SipHashState33_1B058F05A8487D9ECE0F4F45D1D63D45LLV }>
+%Ts13_SipHashState33_1B058F05A8487D9ECE0F4F45D1D63D45LLV = type <{ %Ts6UInt64V, %Ts6UInt64V, %Ts6UInt64V, %Ts6UInt64V }>
+%TSq.0 = type <{}>
+%swift.type_metadata_record = type { i32 }
+%Ts18DictionaryIteratorVy7sample213LinkParameterOSSG = type <{ %Ts32DictionaryIteratorRepresentationOy7sample213LinkParameterOSSG }>
+%Ts32DictionaryIteratorRepresentationOy7sample213LinkParameterOSSG = type <{ <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }> }>
+%Ts22_NativeDictionaryIndexV = type <{ %TSi }>
+%TSi = type <{ i64 }>
+%T7sample213LinkParameterO3key_SS5valuetSg = type <{ [24 x i8] }>
+%swift.metadata_response = type { %swift.type*, i64 }
+%Ts27_ContiguousArrayStorageBaseC = type opaque
+%swift.refcounted = type { %swift.type*, i64 }
+%T7sample213LinkParameterO = type <{ i8 }>
+%TSq = type <{}>
+%Ts18DictionaryIteratorV = type <{ %Ts32DictionaryIteratorRepresentationO }>
+%Ts32DictionaryIteratorRepresentationO = type <{ <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }> }>
+%Ts12StaticStringV = type <{ i64, i64, i8 }>
+%T7sample213LinkParameterOSg = type <{ [1 x i8] }>
+
+@"sample2.linkParameters : [sample2.LinkParameter : Swift.String]" = hidden global %TSD zeroinitializer, align 8
+@"sample2.headerValue : Swift.String" = hidden global %TSS zeroinitializer, align 8
+@"lazy cache variable for type metadata for (sample2.LinkParameter, Swift.String)" = linkonce_odr hidden global %swift.type* null, align 8
+@"type metadata for Swift.String" = external global %swift.type, align 8
+@0 = private unnamed_addr constant [5 x i8] c"root\00"
+@"lazy protocol witness table cache variable for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Hashable in sample2" = linkonce_odr hidden global i8** null, align 8
+@1 = private unnamed_addr constant [1 x i8] zeroinitializer
+@"lazy cache variable for type metadata for Swift.DictionaryIterator<sample2.LinkParameter, Swift.String>" = linkonce_odr hidden global %swift.type* null, align 8
+@"type metadata for Swift.Int" = external global %swift.type, align 8
+@"protocol witness table for Swift.Int : Swift.Hashable in Swift" = external global i8*, align 8
+@"type metadata for Swift.StaticString" = external global %swift.type, align 8
+@2 = private unnamed_addr constant [4 x i8] c"val\00"
+@3 = private unnamed_addr constant [5 x i8] c"type\00"
+@4 = private unnamed_addr constant [4 x i8] c"rel\00"
+@"protocol conformance descriptor for sample2.LinkParameter : Swift.Equatable in sample2" = protected constant %swift.protocol_conformance_descriptor { i32 add (i32 trunc (i64 sub (i64 ptrtoint (%swift.protocol** @"got.protocol descriptor for Swift.Equatable" to i64), i64 ptrtoint (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Equatable in sample2" to i64)) to i32), i32 1), i32 trunc (i64 sub (i64 ptrtoint (<{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.protocol_conformance_descriptor, %swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Equatable in sample2", i32 0, i32 1) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (i8** ()* @"protocol witness table accessor for sample2.LinkParameter : Swift.Equatable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.protocol_conformance_descriptor, %swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Equatable in sample2", i32 0, i32 2) to i64)) to i32), i32 1 }, align 8
+@"protocol witness table pattern for sample2.LinkParameter : Swift.Equatable in sample2" = internal constant [1 x i8*] [i8* bitcast (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Equatable in sample2" to i8*)], align 8
+@"generic protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2" = internal constant %swift.generic_witness_table_cache { i16 1, i16 0, i32 add (i32 trunc (i64 sub (i64 ptrtoint (%swift.protocol** @"got.protocol descriptor for Swift.Equatable" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2", i32 0, i32 2) to i64)) to i32), i32 1), i32 trunc (i64 sub (i64 ptrtoint ([1 x i8*]* @"protocol witness table pattern for sample2.LinkParameter : Swift.Equatable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2", i32 0, i32 3) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint ({ i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2", i32 0, i32 4) to i64)) to i32), i32 0, i32 trunc (i64 sub (i64 ptrtoint ([16 x i8*]* @5 to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2", i32 0, i32 6) to i64)) to i32) }, align 8
+@"protocol descriptor for Swift.Equatable" = external global %swift.protocol, align 8
+@"got.protocol descriptor for Swift.Equatable" = private unnamed_addr constant %swift.protocol* @"protocol descriptor for Swift.Equatable"
+@"got.dispatch thunk of static Swift.Equatable.== infix(A, A) -> Swift.Bool" = private unnamed_addr constant i1 (%swift.opaque*, %swift.opaque*, %swift.type*, %swift.type*, i8**)* @"dispatch thunk of static Swift.Equatable.== infix(A, A) -> Swift.Bool"
+@"resilient protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2" = internal constant { i32, i32, i32 } { i32 1, i32 trunc (i64 sub (i64 ptrtoint (i1 (%swift.opaque*, %swift.opaque*, %swift.type*, %swift.type*, i8**)** @"got.dispatch thunk of static Swift.Equatable.== infix(A, A) -> Swift.Bool" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32 }, { i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2", i32 0, i32 1) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (i1 (%T7sample213LinkParameterO*, %T7sample213LinkParameterO*, %swift.type*, %swift.type*, i8**)* @"protocol witness for static Swift.Equatable.== infix(A, A) -> Swift.Bool in conformance sample2.LinkParameter : Swift.Equatable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32 }, { i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2", i32 0, i32 2) to i64)) to i32) }, section ".rodata", align 8
+@5 = internal global [16 x i8*] zeroinitializer
+@"protocol conformance descriptor for sample2.LinkParameter : Swift.Hashable in sample2" = protected constant %swift.protocol_conformance_descriptor { i32 add (i32 trunc (i64 sub (i64 ptrtoint (%swift.protocol** @"got.protocol descriptor for Swift.Hashable" to i64), i64 ptrtoint (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Hashable in sample2" to i64)) to i32), i32 1), i32 trunc (i64 sub (i64 ptrtoint (<{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.protocol_conformance_descriptor, %swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 1) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (i8** ()* @"protocol witness table accessor for sample2.LinkParameter : Swift.Hashable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.protocol_conformance_descriptor, %swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 2) to i64)) to i32), i32 1 }, align 8
+@"protocol witness table pattern for sample2.LinkParameter : Swift.Hashable in sample2" = internal constant [2 x i8*] [i8* bitcast (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Hashable in sample2" to i8*), i8* null], align 8
+@"generic protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2" = internal constant %swift.generic_witness_table_cache { i16 2, i16 0, i32 add (i32 trunc (i64 sub (i64 ptrtoint (%swift.protocol** @"got.protocol descriptor for Swift.Hashable" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 2) to i64)) to i32), i32 1), i32 trunc (i64 sub (i64 ptrtoint ([2 x i8*]* @"protocol witness table pattern for sample2.LinkParameter : Swift.Hashable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 3) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint ({ i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 4) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (void (i8**, %swift.type*, i8**)* @"instantiation function for generic protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 5) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint ([16 x i8*]* @6 to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 6) to i64)) to i32) }, align 8
+@"lazy protocol witness table cache variable for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Equatable in sample2" = linkonce_odr hidden global i8** null, align 8
+@"protocol descriptor for Swift.Hashable" = external global %swift.protocol, align 8
+@"got.protocol descriptor for Swift.Hashable" = private unnamed_addr constant %swift.protocol* @"protocol descriptor for Swift.Hashable"
+@"got.dispatch thunk of Swift.Hashable.hashValue.getter : Swift.Int" = private unnamed_addr constant i64 (%swift.opaque*, %swift.type*, i8**)* @"dispatch thunk of Swift.Hashable.hashValue.getter : Swift.Int"
+@"got.dispatch thunk of Swift.Hashable.hash(into: inout Swift.Hasher) -> ()" = private unnamed_addr constant void (%Ts6HasherV*, %swift.opaque*, %swift.type*, i8**)* @"dispatch thunk of Swift.Hashable.hash(into: inout Swift.Hasher) -> ()"
+@"resilient protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2" = internal constant { i32, i32, i32, i32, i32 } { i32 2, i32 trunc (i64 sub (i64 ptrtoint (i64 (%swift.opaque*, %swift.type*, i8**)** @"got.dispatch thunk of Swift.Hashable.hashValue.getter : Swift.Int" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 1) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (i64 (%T7sample213LinkParameterO*, %swift.type*, i8**)* @"protocol witness for Swift.Hashable.hashValue.getter : Swift.Int in conformance sample2.LinkParameter : Swift.Hashable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 2) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (void (%Ts6HasherV*, %swift.opaque*, %swift.type*, i8**)** @"got.dispatch thunk of Swift.Hashable.hash(into: inout Swift.Hasher) -> ()" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 3) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (void (%Ts6HasherV*, %T7sample213LinkParameterO*, %swift.type*, i8**)* @"protocol witness for Swift.Hashable.hash(into: inout Swift.Hasher) -> () in conformance sample2.LinkParameter : Swift.Hashable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", i32 0, i32 4) to i64)) to i32) }, section ".rodata", align 8
+@6 = internal global [16 x i8*] zeroinitializer
+@"protocol conformance descriptor for sample2.LinkParameter : Swift.RawRepresentable in sample2" = protected constant %swift.protocol_conformance_descriptor { i32 add (i32 trunc (i64 sub (i64 ptrtoint (%swift.protocol** @"got.protocol descriptor for Swift.RawRepresentable" to i64), i64 ptrtoint (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.RawRepresentable in sample2" to i64)) to i32), i32 1), i32 trunc (i64 sub (i64 ptrtoint (<{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.protocol_conformance_descriptor, %swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 1) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (i8** ()* @"protocol witness table accessor for sample2.LinkParameter : Swift.RawRepresentable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.protocol_conformance_descriptor, %swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 2) to i64)) to i32), i32 1 }, align 8
+@"protocol witness table pattern for sample2.LinkParameter : Swift.RawRepresentable in sample2" = internal constant [2 x i8*] [i8* bitcast (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.RawRepresentable in sample2" to i8*), i8* bitcast (%swift.metadata_response (i64)* @"type metadata accessor for Swift.String" to i8*)], align 8
+@"generic protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2" = internal constant %swift.generic_witness_table_cache { i16 2, i16 0, i32 add (i32 trunc (i64 sub (i64 ptrtoint (%swift.protocol** @"got.protocol descriptor for Swift.RawRepresentable" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 2) to i64)) to i32), i32 1), i32 trunc (i64 sub (i64 ptrtoint ([2 x i8*]* @"protocol witness table pattern for sample2.LinkParameter : Swift.RawRepresentable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 3) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint ({ i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 4) to i64)) to i32), i32 0, i32 trunc (i64 sub (i64 ptrtoint ([16 x i8*]* @7 to i64), i64 ptrtoint (i32* getelementptr inbounds (%swift.generic_witness_table_cache, %swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 6) to i64)) to i32) }, align 8
+@"protocol descriptor for Swift.RawRepresentable" = external global %swift.protocol, align 8
+@"got.protocol descriptor for Swift.RawRepresentable" = private unnamed_addr constant %swift.protocol* @"protocol descriptor for Swift.RawRepresentable"
+@"got.dispatch thunk of Swift.RawRepresentable.init(rawValue: A.RawValue) -> A?" = private unnamed_addr constant void (%TSq.0*, %swift.opaque*, %swift.type*, %swift.type*, i8**)* @"dispatch thunk of Swift.RawRepresentable.init(rawValue: A.RawValue) -> A?"
+@"got.dispatch thunk of Swift.RawRepresentable.rawValue.getter : A.RawValue" = private unnamed_addr constant void (%swift.opaque*, %swift.opaque*, %swift.type*, i8**)* @"dispatch thunk of Swift.RawRepresentable.rawValue.getter : A.RawValue"
+@"resilient protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2" = internal constant { i32, i32, i32, i32, i32 } { i32 2, i32 trunc (i64 sub (i64 ptrtoint (void (%TSq.0*, %swift.opaque*, %swift.type*, %swift.type*, i8**)** @"got.dispatch thunk of Swift.RawRepresentable.init(rawValue: A.RawValue) -> A?" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 1) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (void (%T7sample213LinkParameterOSg*, %TSS*, %swift.type*, %swift.type*, i8**)* @"protocol witness for Swift.RawRepresentable.init(rawValue: A.RawValue) -> A? in conformance sample2.LinkParameter : Swift.RawRepresentable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 2) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (void (%swift.opaque*, %swift.opaque*, %swift.type*, i8**)** @"got.dispatch thunk of Swift.RawRepresentable.rawValue.getter : A.RawValue" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 3) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (void (%TSS*, %T7sample213LinkParameterO*, %swift.type*, i8**)* @"protocol witness for Swift.RawRepresentable.rawValue.getter : A.RawValue in conformance sample2.LinkParameter : Swift.RawRepresentable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 4) to i64)) to i32) }, section ".rodata", align 8
+@7 = internal global [16 x i8*] zeroinitializer
+@"value witness table for sample2.LinkParameter" = internal constant [18 x i8*] [i8* bitcast (i8* (i8*, i8*, %swift.type*)* @__swift_memcpy1_1 to i8*), i8* bitcast (void (i8*, %swift.type*)* @__swift_noop_void_return to i8*), i8* bitcast (i8* (i8*, i8*, %swift.type*)* @__swift_memcpy1_1 to i8*), i8* bitcast (i8* (i8*, i8*, %swift.type*)* @__swift_memcpy1_1 to i8*), i8* bitcast (i8* (i8*, i8*, %swift.type*)* @__swift_memcpy1_1 to i8*), i8* bitcast (i8* (i8*, i8*, %swift.type*)* @__swift_memcpy1_1 to i8*), i8* bitcast (i8* (i8*, i8*, %swift.type*)* @__swift_memcpy1_1 to i8*), i8* bitcast (i32 (%swift.opaque*, i32, %swift.type*)* @"getEnumTagSinglePayload value witness for sample2.LinkParameter" to i8*), i8* bitcast (void (%swift.opaque*, i32, i32, %swift.type*)* @"storeEnumTagSinglePayload value witness for sample2.LinkParameter" to i8*), i8* inttoptr (i64 1 to i8*), i8* inttoptr (i64 2359296 to i8*), i8* inttoptr (i64 1 to i8*), i8* inttoptr (i64 253 to i8*), i8* bitcast (void (%swift.opaque*, i32, %swift.type*)* @"storeExtraInhabitant value witness for sample2.LinkParameter" to i8*), i8* bitcast (i32 (%swift.opaque*, %swift.type*)* @"getExtraInhabitantIndex value witness for sample2.LinkParameter" to i8*), i8* bitcast (i32 (%swift.opaque*, %swift.type*)* @"getEnumTag value witness for sample2.LinkParameter" to i8*), i8* bitcast (void (%swift.opaque*, %swift.type*)* @"destructiveProjectEnumData value witness for sample2.LinkParameter" to i8*), i8* bitcast (void (%swift.opaque*, i32, %swift.type*)* @"destructiveInjectEnumTag value witness for sample2.LinkParameter" to i8*)], align 8
+@8 = private constant [8 x i8] c"sample2\00"
+@"module descriptor sample2" = linkonce_odr hidden constant <{ i32, i32, i32 }> <{ i32 0, i32 0, i32 trunc (i64 sub (i64 ptrtoint ([8 x i8]* @8 to i64), i64 ptrtoint (i32* getelementptr inbounds (<{ i32, i32, i32 }>, <{ i32, i32, i32 }>* @"module descriptor sample2", i32 0, i32 2) to i64)) to i32) }>, section ".rodata", align 4
+@9 = private constant [14 x i8] c"LinkParameter\00"
+@"nominal type descriptor for sample2.LinkParameter" = protected constant <{ i32, i32, i32, i32, i32, i32 }> <{ i32 262226, i32 trunc (i64 sub (i64 ptrtoint (<{ i32, i32, i32 }>* @"module descriptor sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds (<{ i32, i32, i32, i32, i32, i32 }>, <{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter", i32 0, i32 1) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint ([14 x i8]* @9 to i64), i64 ptrtoint (i32* getelementptr inbounds (<{ i32, i32, i32, i32, i32, i32 }>, <{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter", i32 0, i32 2) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (%swift.metadata_response (i64)* @"type metadata accessor for sample2.LinkParameter" to i64), i64 ptrtoint (i32* getelementptr inbounds (<{ i32, i32, i32, i32, i32, i32 }>, <{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter", i32 0, i32 3) to i64)) to i32), i32 0, i32 3 }>, section ".rodata", align 4
+@"full type metadata for sample2.LinkParameter" = internal constant <{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }> <{ i8** getelementptr inbounds ([18 x i8*], [18 x i8*]* @"value witness table for sample2.LinkParameter", i32 0, i32 0), i64 2, <{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter" }>, align 8
+@"symbolic \01____ 7sample213LinkParameterO" = linkonce_odr hidden constant <{ [1 x i8], i32, i8 }> <{ [1 x i8] c"\01", i32 trunc (i64 sub (i64 ptrtoint (<{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter" to i64), i64 ptrtoint (i32* getelementptr inbounds (<{ [1 x i8], i32, i8 }>, <{ [1 x i8], i32, i8 }>* @"symbolic \01____ 7sample213LinkParameterO", i32 0, i32 1) to i64)) to i32), i8 0 }>, section "swift4_typeref", align 1
+@10 = private constant [4 x i8] c"val\00", section "swift4_reflstr"
+@11 = private constant [5 x i8] c"type\00", section "swift4_reflstr"
+@12 = private constant [4 x i8] c"rel\00", section "swift4_reflstr"
+@"reflection metadata field descriptor sample2.LinkParameter" = internal constant { i32, i32, i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 } { i32 trunc (i64 sub (i64 ptrtoint (<{ [1 x i8], i32, i8 }>* @"symbolic \01____ 7sample213LinkParameterO" to i64), i64 ptrtoint ({ i32, i32, i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 }* @"reflection metadata field descriptor sample2.LinkParameter" to i64)) to i32), i32 0, i16 2, i16 12, i32 3, i32 0, i32 0, i32 trunc (i64 sub (i64 ptrtoint ([4 x i8]* @10 to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 }, { i32, i32, i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 }* @"reflection metadata field descriptor sample2.LinkParameter", i32 0, i32 7) to i64)) to i32), i32 0, i32 0, i32 trunc (i64 sub (i64 ptrtoint ([5 x i8]* @11 to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 }, { i32, i32, i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 }* @"reflection metadata field descriptor sample2.LinkParameter", i32 0, i32 10) to i64)) to i32), i32 0, i32 0, i32 trunc (i64 sub (i64 ptrtoint ([4 x i8]* @12 to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 }, { i32, i32, i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 }* @"reflection metadata field descriptor sample2.LinkParameter", i32 0, i32 13) to i64)) to i32) }, section "swift4_fieldmd", align 4
+@"lazy protocol witness table cache variable for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.RawRepresentable in sample2" = linkonce_odr hidden global i8** null, align 8
+@"protocol witness table for Swift.String : Swift.Equatable in Swift" = external global i8*, align 8
+@"symbolic 7sample213LinkParameterO" = linkonce_odr hidden constant <{ [24 x i8], i8 }> <{ [24 x i8] c"7sample213LinkParameterO", i8 0 }>, section "swift4_typeref", align 1
+@"symbolic Swift.RawRepresentable" = linkonce_odr hidden constant <{ [22 x i8], i8 }> <{ [22 x i8] c"Swift.RawRepresentable", i8 0 }>, section "swift4_typeref", align 1
+@13 = private constant [9 x i8] c"RawValue\00", section "swift4_reflstr"
+@"symbolic SS" = linkonce_odr hidden constant <{ [2 x i8], i8 }> <{ [2 x i8] c"SS", i8 0 }>, section "swift4_typeref", align 1
+@"reflection metadata associated type descriptor sample2.LinkParameter : Swift.RawRepresentable in sample2" = internal constant { i32, i32, i32, i32, i32, i32 } { i32 trunc (i64 sub (i64 ptrtoint (<{ [24 x i8], i8 }>* @"symbolic 7sample213LinkParameterO" to i64), i64 ptrtoint ({ i32, i32, i32, i32, i32, i32 }* @"reflection metadata associated type descriptor sample2.LinkParameter : Swift.RawRepresentable in sample2" to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (<{ [22 x i8], i8 }>* @"symbolic Swift.RawRepresentable" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32, i32 }* @"reflection metadata associated type descriptor sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 1) to i64)) to i32), i32 1, i32 8, i32 trunc (i64 sub (i64 ptrtoint ([9 x i8]* @13 to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32, i32 }* @"reflection metadata associated type descriptor sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 4) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (<{ [2 x i8], i8 }>* @"symbolic SS" to i64), i64 ptrtoint (i32* getelementptr inbounds ({ i32, i32, i32, i32, i32, i32 }, { i32, i32, i32, i32, i32, i32 }* @"reflection metadata associated type descriptor sample2.LinkParameter : Swift.RawRepresentable in sample2", i32 0, i32 5) to i64)) to i32) }, section "swift4_assocty", align 4
+@"\01l_protocol_conformances" = private constant [3 x i32] [i32 trunc (i64 sub (i64 ptrtoint (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Equatable in sample2" to i64), i64 ptrtoint ([3 x i32]* @"\01l_protocol_conformances" to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Hashable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds ([3 x i32], [3 x i32]* @"\01l_protocol_conformances", i32 0, i32 1) to i64)) to i32), i32 trunc (i64 sub (i64 ptrtoint (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.RawRepresentable in sample2" to i64), i64 ptrtoint (i32* getelementptr inbounds ([3 x i32], [3 x i32]* @"\01l_protocol_conformances", i32 0, i32 2) to i64)) to i32)], section "swift4_protocol_conformances", align 4
+@"\01l_type_metadata_table" = private constant [1 x %swift.type_metadata_record] [%swift.type_metadata_record { i32 trunc (i64 sub (i64 ptrtoint (<{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter" to i64), i64 ptrtoint ([1 x %swift.type_metadata_record]* @"\01l_type_metadata_table" to i64)) to i32) }], section "swift4_type_metadata", align 4
+@__swift_reflection_version = linkonce_odr hidden constant i16 3
+@_swift1_autolink_entries = private constant [37 x i8] c"-lswiftSwiftOnoneSupport\00-lswiftCore\00", section ".swift1_autolink_entries", align 8
+@llvm.used = appending global [23 x i8*] [i8* bitcast (i64 (i8)* @"sample2.LinkParameter.hashValue.getter : Swift.Int" to i8*), i8* bitcast (void (%Ts6HasherV*, i8)* @"sample2.LinkParameter.hash(into: inout Swift.Hasher) -> ()" to i8*), i8* bitcast (i8 (%swift.bridge*, i64)* @"sample2.LinkParameter.init(rawValue: Swift.String) -> sample2.LinkParameter?" to i8*), i8* bitcast ({ %swift.bridge*, i64 } (i8)* @"sample2.LinkParameter.rawValue.getter : Swift.String" to i8*), i8* bitcast (i8** ()* @"protocol witness table accessor for sample2.LinkParameter : Swift.Equatable in sample2" to i8*), i8* bitcast (i8** ()* @"protocol witness table accessor for sample2.LinkParameter : Swift.Hashable in sample2" to i8*), i8* bitcast (i8** ()* @"protocol witness table accessor for sample2.LinkParameter : Swift.RawRepresentable in sample2" to i8*), i8* bitcast (<{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter" to i8*), i8* bitcast (%swift.metadata_response (i64)* @"type metadata accessor for sample2.LinkParameter" to i8*), i8* bitcast (<{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>* @"full type metadata for sample2.LinkParameter" to i8*), i8* bitcast (%swift.type* @"type metadata for sample2.LinkParameter" to i8*), i8* bitcast ({ i32, i32, i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 }* @"reflection metadata field descriptor sample2.LinkParameter" to i8*), i8* bitcast (i8** ()* @"protocol witness table accessor for sample2.LinkParameter : Swift.Equatable in sample2" to i8*), i8* bitcast (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Equatable in sample2" to i8*), i8* bitcast (i8** ()* @"protocol witness table accessor for sample2.LinkParameter : Swift.Hashable in sample2" to i8*), i8* bitcast (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.Hashable in sample2" to i8*), i8* bitcast ({ i32, i32, i32, i32, i32, i32 }* @"reflection metadata associated type descriptor sample2.LinkParameter : Swift.RawRepresentable in sample2" to i8*), i8* bitcast (i8** ()* @"protocol witness table accessor for sample2.LinkParameter : Swift.RawRepresentable in sample2" to i8*), i8* bitcast (%swift.protocol_conformance_descriptor* @"protocol conformance descriptor for sample2.LinkParameter : Swift.RawRepresentable in sample2" to i8*), i8* bitcast ([3 x i32]* @"\01l_protocol_conformances" to i8*), i8* bitcast ([1 x %swift.type_metadata_record]* @"\01l_type_metadata_table" to i8*), i8* bitcast (i16* @__swift_reflection_version to i8*), i8* getelementptr inbounds ([37 x i8], [37 x i8]* @_swift1_autolink_entries, i32 0, i32 0)], section "llvm.metadata", align 8
+
+@"type metadata for sample2.LinkParameter" = protected alias %swift.type, bitcast (i64* getelementptr inbounds (<{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>, <{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>* @"full type metadata for sample2.LinkParameter", i32 0, i32 1) to %swift.type*)
+
+define protected i32 @main(i32, i8**) #0 {
+entry:
+  %"$generator" = alloca %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG, align 8
+  %2 = bitcast %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG* %"$generator" to %swift.opaque**
+  store %swift.opaque* null, %swift.opaque** %2, align 8
+  %access-scratch = alloca [24 x i8], align 8
+  %3 = alloca %T7sample213LinkParameterO3key_SS5valuetSg, align 8
+  %4 = bitcast i8** %1 to i8*
+  %5 = call swiftcc %swift.metadata_response @"type metadata accessor for (sample2.LinkParameter, Swift.String)"(i64 0) #9
+  %6 = extractvalue %swift.metadata_response %5, 0
+  %7 = call swiftcc { %Ts27_ContiguousArrayStorageBaseC*, i8* } @"Swift._allocateUninitializedArray<A>(Builtin.Word) -> ([A], Builtin.RawPointer)"(i64 1, %swift.type* %6)
+  %8 = extractvalue { %Ts27_ContiguousArrayStorageBaseC*, i8* } %7, 0
+  %9 = extractvalue { %Ts27_ContiguousArrayStorageBaseC*, i8* } %7, 1
+  %10 = bitcast %Ts27_ContiguousArrayStorageBaseC* %8 to %swift.refcounted*
+  %11 = call %swift.refcounted* @swift_retain(%swift.refcounted* returned %10) #4
+  call void bitcast (void (%swift.refcounted*)* @swift_release to void (%Ts27_ContiguousArrayStorageBaseC*)*)(%Ts27_ContiguousArrayStorageBaseC* %8) #4
+  %12 = bitcast i8* %9 to <{ %T7sample213LinkParameterO, [7 x i8], %TSS }>*
+  %.elt = getelementptr inbounds <{ %T7sample213LinkParameterO, [7 x i8], %TSS }>, <{ %T7sample213LinkParameterO, [7 x i8], %TSS }>* %12, i32 0, i32 0
+  %.elt1 = getelementptr inbounds <{ %T7sample213LinkParameterO, [7 x i8], %TSS }>, <{ %T7sample213LinkParameterO, [7 x i8], %TSS }>* %12, i32 0, i32 2
+  %13 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %.elt, i32 0, i32 0
+  store i8 2, i8* %13, align 8
+  %14 = call swiftcc { %swift.bridge*, i64 } @"Swift.String.init(_builtinStringLiteral: Builtin.RawPointer, utf8CodeUnitCount: Builtin.Word, isASCII: Builtin.Int1) -> Swift.String"(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @0, i64 0, i64 0), i64 4, i1 true)
+  %15 = extractvalue { %swift.bridge*, i64 } %14, 0
+  %16 = extractvalue { %swift.bridge*, i64 } %14, 1
+  %.elt1._guts = getelementptr inbounds %TSS, %TSS* %.elt1, i32 0, i32 0
+  %.elt1._guts._object = getelementptr inbounds %Ts11_StringGutsV, %Ts11_StringGutsV* %.elt1._guts, i32 0, i32 0
+  %.elt1._guts._object._object = getelementptr inbounds %Ts13_StringObjectV, %Ts13_StringObjectV* %.elt1._guts._object, i32 0, i32 0
+  store %swift.bridge* %15, %swift.bridge** %.elt1._guts._object._object, align 8
+  %.elt1._guts._otherBits = getelementptr inbounds %Ts11_StringGutsV, %Ts11_StringGutsV* %.elt1._guts, i32 0, i32 1
+  %.elt1._guts._otherBits._value = getelementptr inbounds %TSu, %TSu* %.elt1._guts._otherBits, i32 0, i32 0
+  store i64 %16, i64* %.elt1._guts._otherBits._value, align 8
+  %17 = call i8** @"lazy protocol witness table accessor for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Hashable in sample2"() #9
+  %18 = call swiftcc %Ts27_RawNativeDictionaryStorageC* @"Swift.Dictionary.init(dictionaryLiteral: (A, B)...) -> [A : B]"(%Ts27_ContiguousArrayStorageBaseC* %8, %swift.type* bitcast (i64* getelementptr inbounds (<{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>, <{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>* @"full type metadata for sample2.LinkParameter", i32 0, i32 1) to %swift.type*), %swift.type* @"type metadata for Swift.String", i8** %17)
+  store %Ts27_RawNativeDictionaryStorageC* %18, %Ts27_RawNativeDictionaryStorageC** getelementptr inbounds (%TSD, %TSD* @"sample2.linkParameters : [sample2.LinkParameter : Swift.String]", i32 0, i32 0, i32 0, i32 0), align 8
+  %19 = call swiftcc { %swift.bridge*, i64 } @"Swift.String.init(_builtinStringLiteral: Builtin.RawPointer, utf8CodeUnitCount: Builtin.Word, isASCII: Builtin.Int1) -> Swift.String"(i8* getelementptr inbounds ([1 x i8], [1 x i8]* @1, i64 0, i64 0), i64 0, i1 true)
+  %20 = extractvalue { %swift.bridge*, i64 } %19, 0
+  %21 = extractvalue { %swift.bridge*, i64 } %19, 1
+  store %swift.bridge* %20, %swift.bridge** getelementptr inbounds (%TSS, %TSS* @"sample2.headerValue : Swift.String", i32 0, i32 0, i32 0, i32 0), align 8
+  store i64 %21, i64* getelementptr inbounds (%TSS, %TSS* @"sample2.headerValue : Swift.String", i32 0, i32 0, i32 1, i32 0), align 8
+  %22 = bitcast %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG* %"$generator" to i8*
+  call void @llvm.lifetime.start.p0i8(i64 24, i8* %22)
+  %23 = bitcast [24 x i8]* %access-scratch to i8*
+  call void @llvm.lifetime.start.p0i8(i64 -1, i8* %23)
+  call void @swift_beginAccess(i8* bitcast (%TSD* @"sample2.linkParameters : [sample2.LinkParameter : Swift.String]" to i8*), [24 x i8]* %access-scratch, i64 32, i8* null) #4
+  %24 = load %Ts27_RawNativeDictionaryStorageC*, %Ts27_RawNativeDictionaryStorageC** getelementptr inbounds (%TSD, %TSD* @"sample2.linkParameters : [sample2.LinkParameter : Swift.String]", i32 0, i32 0, i32 0, i32 0), align 8
+  %25 = bitcast %Ts27_RawNativeDictionaryStorageC* %24 to %swift.refcounted*
+  %26 = call %swift.refcounted* @swift_retain(%swift.refcounted* returned %25) #4
+  call void @swift_endAccess([24 x i8]* %access-scratch) #4
+  %27 = bitcast [24 x i8]* %access-scratch to i8*
+  call void @llvm.lifetime.end.p0i8(i64 -1, i8* %27)
+  %28 = call swiftcc { i64, i64, %Ts27_RawNativeDictionaryStorageC* } @"Swift.Dictionary.makeIterator() -> Swift.DictionaryIterator<A, B>"(%Ts27_RawNativeDictionaryStorageC* %24, %swift.type* bitcast (i64* getelementptr inbounds (<{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>, <{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>* @"full type metadata for sample2.LinkParameter", i32 0, i32 1) to %swift.type*), %swift.type* @"type metadata for Swift.String", i8** %17)
+  %29 = extractvalue { i64, i64, %Ts27_RawNativeDictionaryStorageC* } %28, 0
+  %30 = extractvalue { i64, i64, %Ts27_RawNativeDictionaryStorageC* } %28, 1
+  %31 = extractvalue { i64, i64, %Ts27_RawNativeDictionaryStorageC* } %28, 2
+  call void bitcast (void (%swift.refcounted*)* @swift_release to void (%Ts27_RawNativeDictionaryStorageC*)*)(%Ts27_RawNativeDictionaryStorageC* %24) #4
+  %"$generator._state" = getelementptr inbounds %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG, %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG* %"$generator", i32 0, i32 0
+  %32 = bitcast %Ts32DictionaryIteratorRepresentationOy7sample213LinkParameterOSSG* %"$generator._state" to <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }>*
+  %.start = getelementptr inbounds <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }>, <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }>* %32, i32 0, i32 0
+  %.start.offset = getelementptr inbounds %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV* %.start, i32 0, i32 0
+  %.start.offset._value = getelementptr inbounds %TSi, %TSi* %.start.offset, i32 0, i32 0
+  store i64 %29, i64* %.start.offset._value, align 8
+  %.end = getelementptr inbounds <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }>, <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }>* %32, i32 0, i32 1
+  %.end.offset = getelementptr inbounds %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV* %.end, i32 0, i32 0
+  %.end.offset._value = getelementptr inbounds %TSi, %TSi* %.end.offset, i32 0, i32 0
+  store i64 %30, i64* %.end.offset._value, align 8
+  %.buffer = getelementptr inbounds <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }>, <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }>* %32, i32 0, i32 2
+  %.buffer._storage = getelementptr inbounds %Ts23_NativeDictionaryBufferV, %Ts23_NativeDictionaryBufferV* %.buffer, i32 0, i32 0
+  store %Ts27_RawNativeDictionaryStorageC* %31, %Ts27_RawNativeDictionaryStorageC** %.buffer._storage, align 8
+  br label %33
+
+; <label>:33:                                     ; preds = %53, %entry
+  %34 = bitcast %T7sample213LinkParameterO3key_SS5valuetSg* %3 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 24, i8* %34)
+  %35 = bitcast %T7sample213LinkParameterO3key_SS5valuetSg* %3 to %TSq*
+  %36 = call swiftcc %swift.metadata_response @"type metadata accessor for Swift.DictionaryIterator<sample2.LinkParameter, Swift.String>"(i64 0) #9
+  %37 = extractvalue %swift.metadata_response %36, 0
+  %38 = bitcast %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG* %"$generator" to %Ts18DictionaryIteratorV*
+  call swiftcc void @"Swift.DictionaryIterator.next() -> (key: A, value: B)?"(%TSq* noalias nocapture sret %35, %swift.type* %37, %Ts18DictionaryIteratorV* nocapture swiftself dereferenceable(24) %38)
+  %39 = bitcast %T7sample213LinkParameterO3key_SS5valuetSg* %3 to { i64, i64, i64 }*
+  %40 = getelementptr inbounds { i64, i64, i64 }, { i64, i64, i64 }* %39, i32 0, i32 0
+  %41 = load i64, i64* %40, align 8
+  %42 = getelementptr inbounds { i64, i64, i64 }, { i64, i64, i64 }* %39, i32 0, i32 1
+  %43 = load i64, i64* %42, align 8
+  %44 = getelementptr inbounds { i64, i64, i64 }, { i64, i64, i64 }* %39, i32 0, i32 2
+  %45 = load i64, i64* %44, align 8
+  %46 = bitcast %T7sample213LinkParameterO3key_SS5valuetSg* %3 to i8*
+  call void @llvm.lifetime.end.p0i8(i64 24, i8* %46)
+  %47 = and i64 %41, 255
+  %48 = icmp eq i64 %47, 3
+  br i1 %48, label %52, label %49
+
+; <label>:49:                                     ; preds = %33
+  %50 = trunc i64 %41 to i8
+  %51 = inttoptr i64 %43 to %swift.bridge*
+  br label %53
+
+; <label>:52:                                     ; preds = %33
+  br label %59
+
+; <label>:53:                                     ; preds = %49
+  %54 = phi i8 [ %50, %49 ]
+  %55 = phi %swift.bridge* [ %51, %49 ]
+  %56 = phi i64 [ %45, %49 ]
+  %57 = call %swift.bridge* @swift_bridgeObjectRetain(%swift.bridge* %55) #4
+  %58 = call %swift.bridge* @swift_bridgeObjectRetain(%swift.bridge* %55) #4
+  call void @swift_bridgeObjectRelease(%swift.bridge* %55) #4
+  call void @swift_bridgeObjectRelease(%swift.bridge* %55) #4
+  call void @swift_bridgeObjectRelease(%swift.bridge* %55) #4
+  br label %33
+
+; <label>:59:                                     ; preds = %52
+  %60 = call %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG* @"outlined destroy of Swift.DictionaryIterator<sample2.LinkParameter, Swift.String>"(%Ts18DictionaryIteratorVy7sample213LinkParameterOSSG* %"$generator")
+  %61 = bitcast %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG* %"$generator" to i8*
+  call void @llvm.lifetime.end.p0i8(i64 24, i8* %61)
+  ret i32 0
+}
+
+declare swiftcc { %Ts27_ContiguousArrayStorageBaseC*, i8* } @"Swift._allocateUninitializedArray<A>(Builtin.Word) -> ([A], Builtin.RawPointer)"(i64, %swift.type*) #0
+
+; Function Attrs: nounwind readnone
+define linkonce_odr hidden swiftcc %swift.metadata_response @"type metadata accessor for (sample2.LinkParameter, Swift.String)"(i64) #1 {
+entry:
+  %1 = load %swift.type*, %swift.type** @"lazy cache variable for type metadata for (sample2.LinkParameter, Swift.String)", align 8
+  %2 = icmp eq %swift.type* %1, null
+  br i1 %2, label %cacheIsNull, label %cont
+
+cacheIsNull:                                      ; preds = %entry
+  %3 = call swiftcc %swift.metadata_response @swift_getTupleTypeMetadata2(i64 %0, %swift.type* bitcast (i64* getelementptr inbounds (<{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>, <{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>* @"full type metadata for sample2.LinkParameter", i32 0, i32 1) to %swift.type*), %swift.type* @"type metadata for Swift.String", i8* null, i8** null) #4
+  %4 = extractvalue %swift.metadata_response %3, 0
+  %5 = extractvalue %swift.metadata_response %3, 1
+  %6 = icmp eq i64 %5, 0
+  br i1 %6, label %is_complete, label %cont
+
+is_complete:                                      ; preds = %cacheIsNull
+  store atomic %swift.type* %4, %swift.type** @"lazy cache variable for type metadata for (sample2.LinkParameter, Swift.String)" release, align 8
+  br label %cont
+
+cont:                                             ; preds = %is_complete, %cacheIsNull, %entry
+  %7 = phi %swift.type* [ %1, %entry ], [ %4, %is_complete ], [ %4, %cacheIsNull ]
+  %8 = phi i64 [ 0, %entry ], [ %5, %cacheIsNull ], [ 0, %is_complete ]
+  %9 = insertvalue %swift.metadata_response undef, %swift.type* %7, 0
+  %10 = insertvalue %swift.metadata_response %9, i64 %8, 1
+  ret %swift.metadata_response %10
+}
+
+; Function Attrs: nounwind readonly
+declare swiftcc %swift.metadata_response @swift_getTupleTypeMetadata2(i64, %swift.type*, %swift.type*, i8*, i8**) #2
+
+; Function Attrs: noreturn nounwind
+declare void @llvm.trap() #3
+
+; Function Attrs: nounwind
+declare %swift.refcounted* @swift_retain(%swift.refcounted* returned) #4
+
+; Function Attrs: nounwind
+declare void @swift_release(%swift.refcounted*) #4
+
+declare swiftcc { %swift.bridge*, i64 } @"Swift.String.init(_builtinStringLiteral: Builtin.RawPointer, utf8CodeUnitCount: Builtin.Word, isASCII: Builtin.Int1) -> Swift.String"(i8*, i64, i1) #0
+
+declare swiftcc %Ts27_RawNativeDictionaryStorageC* @"Swift.Dictionary.init(dictionaryLiteral: (A, B)...) -> [A : B]"(%Ts27_ContiguousArrayStorageBaseC*, %swift.type*, %swift.type*, i8**) #0
+
+; Function Attrs: nounwind readnone
+define linkonce_odr hidden i8** @"lazy protocol witness table accessor for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Hashable in sample2"() #1 {
+entry:
+  %0 = load i8**, i8*** @"lazy protocol witness table cache variable for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Hashable in sample2", align 8
+  %1 = icmp eq i8** %0, null
+  br i1 %1, label %cacheIsNull, label %cont
+
+cacheIsNull:                                      ; preds = %entry
+  %2 = call i8** @"protocol witness table accessor for sample2.LinkParameter : Swift.Hashable in sample2"() #9
+  store atomic i8** %2, i8*** @"lazy protocol witness table cache variable for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Hashable in sample2" release, align 8
+  br label %cont
+
+cont:                                             ; preds = %cacheIsNull, %entry
+  %3 = phi i8** [ %0, %entry ], [ %2, %cacheIsNull ]
+  ret i8** %3
+}
+
+define protected i8** @"protocol witness table accessor for sample2.LinkParameter : Swift.Hashable in sample2"() #0 {
+entry:
+  %0 = call i8** @swift_getGenericWitnessTable(%swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", %swift.type* null, i8*** null) #4
+  ret i8** %0
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.lifetime.start.p0i8(i64, i8* nocapture) #5
+
+; Function Attrs: nounwind
+declare void @swift_beginAccess(i8*, [24 x i8]*, i64, i8*) #4
+
+; Function Attrs: nounwind
+declare void @swift_endAccess([24 x i8]*) #4
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.lifetime.end.p0i8(i64, i8* nocapture) #5
+
+declare swiftcc { i64, i64, %Ts27_RawNativeDictionaryStorageC* } @"Swift.Dictionary.makeIterator() -> Swift.DictionaryIterator<A, B>"(%Ts27_RawNativeDictionaryStorageC*, %swift.type*, %swift.type*, i8**) #0
+
+declare swiftcc void @"Swift.DictionaryIterator.next() -> (key: A, value: B)?"(%TSq* noalias nocapture sret, %swift.type*, %Ts18DictionaryIteratorV* nocapture swiftself dereferenceable(24)) #0
+
+; Function Attrs: nounwind readnone
+define linkonce_odr hidden swiftcc %swift.metadata_response @"type metadata accessor for Swift.DictionaryIterator<sample2.LinkParameter, Swift.String>"(i64) #1 {
+entry:
+  %1 = load %swift.type*, %swift.type** @"lazy cache variable for type metadata for Swift.DictionaryIterator<sample2.LinkParameter, Swift.String>", align 8
+  %2 = icmp eq %swift.type* %1, null
+  br i1 %2, label %cacheIsNull, label %cont
+
+cacheIsNull:                                      ; preds = %entry
+  %3 = call i8** @"lazy protocol witness table accessor for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Hashable in sample2"() #9
+  %4 = call swiftcc %swift.metadata_response @"type metadata accessor for Swift.DictionaryIterator"(i64 %0, %swift.type* bitcast (i64* getelementptr inbounds (<{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>, <{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>* @"full type metadata for sample2.LinkParameter", i32 0, i32 1) to %swift.type*), %swift.type* @"type metadata for Swift.String", i8** %3) #9
+  %5 = extractvalue %swift.metadata_response %4, 0
+  %6 = extractvalue %swift.metadata_response %4, 1
+  %7 = icmp eq i64 %6, 0
+  br i1 %7, label %is_complete, label %cont
+
+is_complete:                                      ; preds = %cacheIsNull
+  store atomic %swift.type* %5, %swift.type** @"lazy cache variable for type metadata for Swift.DictionaryIterator<sample2.LinkParameter, Swift.String>" release, align 8
+  br label %cont
+
+cont:                                             ; preds = %is_complete, %cacheIsNull, %entry
+  %8 = phi %swift.type* [ %1, %entry ], [ %5, %is_complete ], [ %5, %cacheIsNull ]
+  %9 = phi i64 [ 0, %entry ], [ %6, %cacheIsNull ], [ 0, %is_complete ]
+  %10 = insertvalue %swift.metadata_response undef, %swift.type* %8, 0
+  %11 = insertvalue %swift.metadata_response %10, i64 %9, 1
+  ret %swift.metadata_response %11
+}
+
+declare swiftcc %swift.metadata_response @"type metadata accessor for Swift.DictionaryIterator"(i64, %swift.type*, %swift.type*, i8**) #0
+
+; Function Attrs: noinline nounwind
+define linkonce_odr hidden %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG* @"outlined destroy of Swift.DictionaryIterator<sample2.LinkParameter, Swift.String>"(%Ts18DictionaryIteratorVy7sample213LinkParameterOSSG*) #6 {
+entry:
+  %._state = getelementptr inbounds %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG, %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG* %0, i32 0, i32 0
+  %1 = bitcast %Ts32DictionaryIteratorRepresentationOy7sample213LinkParameterOSSG* %._state to <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }>*
+  %.buffer = getelementptr inbounds <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }>, <{ %Ts22_NativeDictionaryIndexV, %Ts22_NativeDictionaryIndexV, %Ts23_NativeDictionaryBufferV }>* %1, i32 0, i32 2
+  %.buffer._storage = getelementptr inbounds %Ts23_NativeDictionaryBufferV, %Ts23_NativeDictionaryBufferV* %.buffer, i32 0, i32 0
+  %toDestroy = load %Ts27_RawNativeDictionaryStorageC*, %Ts27_RawNativeDictionaryStorageC** %.buffer._storage, align 8
+  call void bitcast (void (%swift.refcounted*)* @swift_release to void (%Ts27_RawNativeDictionaryStorageC*)*)(%Ts27_RawNativeDictionaryStorageC* %toDestroy) #4
+  ret %Ts18DictionaryIteratorVy7sample213LinkParameterOSSG* %0
+}
+
+; Function Attrs: nounwind
+declare %swift.bridge* @swift_bridgeObjectRetain(%swift.bridge*) #4
+
+; Function Attrs: nounwind
+declare void @swift_bridgeObjectRelease(%swift.bridge*) #4
+
+define protected swiftcc i64 @"sample2.LinkParameter.hashValue.getter : Swift.Int"(i8) #0 {
+entry:
+  %1 = alloca %T7sample213LinkParameterO, align 1
+  %2 = bitcast %T7sample213LinkParameterO* %1 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 1, i8* %2)
+  %3 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %1, i32 0, i32 0
+  store i8 %0, i8* %3, align 1
+  %4 = bitcast %T7sample213LinkParameterO* %1 to %swift.opaque*
+  %5 = call i8** @"lazy protocol witness table accessor for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Hashable in sample2"() #9
+  %6 = call swiftcc i64 @"Swift._hashValue<A where A: Swift.Hashable>(for: A) -> Swift.Int"(%swift.opaque* noalias nocapture %4, %swift.type* bitcast (i64* getelementptr inbounds (<{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>, <{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>* @"full type metadata for sample2.LinkParameter", i32 0, i32 1) to %swift.type*), i8** %5)
+  %7 = bitcast %T7sample213LinkParameterO* %1 to i8*
+  call void @llvm.lifetime.end.p0i8(i64 1, i8* %7)
+  ret i64 %6
+}
+
+declare swiftcc i64 @"Swift._hashValue<A where A: Swift.Hashable>(for: A) -> Swift.Int"(%swift.opaque* noalias nocapture, %swift.type*, i8**) #0
+
+define protected swiftcc void @"sample2.LinkParameter.hash(into: inout Swift.Hasher) -> ()"(%Ts6HasherV* nocapture dereferenceable(40), i8) #0 {
+entry:
+  %discriminator = alloca %TSi, align 8
+  %2 = bitcast %TSi* %discriminator to %swift.opaque**
+  store %swift.opaque* null, %swift.opaque** %2, align 8
+  %3 = alloca %TSi, align 8
+  %4 = bitcast %TSi* %discriminator to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* %4)
+  switch i8 %1, label %5 [
+    i8 0, label %6
+    i8 1, label %7
+    i8 2, label %8
+  ]
+
+; <label>:5:                                      ; preds = %entry
+  unreachable
+
+; <label>:6:                                      ; preds = %entry
+  %discriminator._value3 = getelementptr inbounds %TSi, %TSi* %discriminator, i32 0, i32 0
+  store i64 0, i64* %discriminator._value3, align 8
+  br label %9
+
+; <label>:7:                                      ; preds = %entry
+  %discriminator._value2 = getelementptr inbounds %TSi, %TSi* %discriminator, i32 0, i32 0
+  store i64 1, i64* %discriminator._value2, align 8
+  br label %9
+
+; <label>:8:                                      ; preds = %entry
+  %discriminator._value = getelementptr inbounds %TSi, %TSi* %discriminator, i32 0, i32 0
+  store i64 2, i64* %discriminator._value, align 8
+  br label %9
+
+; <label>:9:                                      ; preds = %6, %7, %8
+  %discriminator._value1 = getelementptr inbounds %TSi, %TSi* %discriminator, i32 0, i32 0
+  %10 = load i64, i64* %discriminator._value1, align 8
+  %11 = bitcast %TSi* %3 to i8*
+  call void @llvm.lifetime.start.p0i8(i64 8, i8* %11)
+  %._value = getelementptr inbounds %TSi, %TSi* %3, i32 0, i32 0
+  store i64 %10, i64* %._value, align 8
+  %12 = bitcast %TSi* %3 to %swift.opaque*
+  call swiftcc void @"Swift.Hasher.combine<A where A: Swift.Hashable>(A) -> ()"(%swift.opaque* noalias nocapture %12, %swift.type* @"type metadata for Swift.Int", i8** @"protocol witness table for Swift.Int : Swift.Hashable in Swift", %Ts6HasherV* nocapture swiftself dereferenceable(40) %0)
+  %13 = bitcast %TSi* %3 to i8*
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* %13)
+  %14 = bitcast %TSi* %discriminator to i8*
+  call void @llvm.lifetime.end.p0i8(i64 8, i8* %14)
+  ret void
+}
+
+declare swiftcc void @"Swift.Hasher.combine<A where A: Swift.Hashable>(A) -> ()"(%swift.opaque* noalias nocapture, %swift.type*, i8**, %Ts6HasherV* nocapture swiftself dereferenceable(40)) #0
+
+define protected swiftcc i8 @"sample2.LinkParameter.init(rawValue: Swift.String) -> sample2.LinkParameter?"(%swift.bridge*, i64) #0 {
+entry:
+  %self = alloca %T7sample213LinkParameterO, align 1
+  %2 = bitcast %T7sample213LinkParameterO* %self to i8*
+  call void @llvm.lifetime.start.p0i8(i64 1, i8* %2)
+  %3 = call swiftcc { %Ts27_ContiguousArrayStorageBaseC*, i8* } @"Swift._allocateUninitializedArray<A>(Builtin.Word) -> ([A], Builtin.RawPointer)"(i64 3, %swift.type* @"type metadata for Swift.StaticString")
+  %4 = extractvalue { %Ts27_ContiguousArrayStorageBaseC*, i8* } %3, 0
+  %5 = extractvalue { %Ts27_ContiguousArrayStorageBaseC*, i8* } %3, 1
+  %6 = bitcast %Ts27_ContiguousArrayStorageBaseC* %4 to %swift.refcounted*
+  %7 = call %swift.refcounted* @swift_retain(%swift.refcounted* returned %6) #4
+  call void bitcast (void (%swift.refcounted*)* @swift_release to void (%Ts27_ContiguousArrayStorageBaseC*)*)(%Ts27_ContiguousArrayStorageBaseC* %4) #4
+  %8 = bitcast i8* %5 to %Ts12StaticStringV*
+  br label %9
+
+; <label>:9:                                      ; preds = %entry
+  br label %10
+
+; <label>:10:                                     ; preds = %9
+  br label %11
+
+; <label>:11:                                     ; preds = %10
+  br label %12
+
+; <label>:12:                                     ; preds = %11
+  %._startPtrOrData = getelementptr inbounds %Ts12StaticStringV, %Ts12StaticStringV* %8, i32 0, i32 0
+  store i64 ptrtoint ([4 x i8]* @2 to i64), i64* %._startPtrOrData, align 8
+  %._utf8CodeUnitCount = getelementptr inbounds %Ts12StaticStringV, %Ts12StaticStringV* %8, i32 0, i32 1
+  store i64 3, i64* %._utf8CodeUnitCount, align 8
+  %._flags = getelementptr inbounds %Ts12StaticStringV, %Ts12StaticStringV* %8, i32 0, i32 2
+  store i8 2, i8* %._flags, align 8
+  %13 = bitcast %Ts12StaticStringV* %8 to i8*
+  %14 = getelementptr inbounds i8, i8* %13, i64 24
+  %15 = bitcast i8* %14 to %Ts12StaticStringV*
+  br label %16
+
+; <label>:16:                                     ; preds = %12
+  br label %17
+
+; <label>:17:                                     ; preds = %16
+  br label %18
+
+; <label>:18:                                     ; preds = %17
+  br label %19
+
+; <label>:19:                                     ; preds = %18
+  %._startPtrOrData1 = getelementptr inbounds %Ts12StaticStringV, %Ts12StaticStringV* %15, i32 0, i32 0
+  store i64 ptrtoint ([5 x i8]* @3 to i64), i64* %._startPtrOrData1, align 1
+  %._utf8CodeUnitCount2 = getelementptr inbounds %Ts12StaticStringV, %Ts12StaticStringV* %15, i32 0, i32 1
+  store i64 4, i64* %._utf8CodeUnitCount2, align 1
+  %._flags3 = getelementptr inbounds %Ts12StaticStringV, %Ts12StaticStringV* %15, i32 0, i32 2
+  store i8 2, i8* %._flags3, align 1
+  %20 = bitcast %Ts12StaticStringV* %8 to i8*
+  %21 = getelementptr inbounds i8, i8* %20, i64 48
+  %22 = bitcast i8* %21 to %Ts12StaticStringV*
+  br label %23
+
+; <label>:23:                                     ; preds = %19
+  br label %24
+
+; <label>:24:                                     ; preds = %23
+  br label %25
+
+; <label>:25:                                     ; preds = %24
+  br label %26
+
+; <label>:26:                                     ; preds = %25
+  %._startPtrOrData4 = getelementptr inbounds %Ts12StaticStringV, %Ts12StaticStringV* %22, i32 0, i32 0
+  store i64 ptrtoint ([4 x i8]* @4 to i64), i64* %._startPtrOrData4, align 2
+  %._utf8CodeUnitCount5 = getelementptr inbounds %Ts12StaticStringV, %Ts12StaticStringV* %22, i32 0, i32 1
+  store i64 3, i64* %._utf8CodeUnitCount5, align 2
+  %._flags6 = getelementptr inbounds %Ts12StaticStringV, %Ts12StaticStringV* %22, i32 0, i32 2
+  store i8 2, i8* %._flags6, align 2
+  %27 = call swiftcc %Ts27_ContiguousArrayStorageBaseC* @"Swift.Array.init(arrayLiteral: A...) -> [A]"(%Ts27_ContiguousArrayStorageBaseC* %4, %swift.type* @"type metadata for Swift.StaticString")
+  %28 = call swiftcc i64 @"Swift._findStringSwitchCase(cases: [Swift.StaticString], string: Swift.String) -> Swift.Int"(%Ts27_ContiguousArrayStorageBaseC* %27, %swift.bridge* %0, i64 %1)
+  call void bitcast (void (%swift.refcounted*)* @swift_release to void (%Ts27_ContiguousArrayStorageBaseC*)*)(%Ts27_ContiguousArrayStorageBaseC* %27) #4
+  %29 = icmp eq i64 0, %28
+  br i1 %29, label %30, label %32
+
+; <label>:30:                                     ; preds = %26
+  %31 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %self, i32 0, i32 0
+  store i8 0, i8* %31, align 1
+  br label %44
+
+; <label>:32:                                     ; preds = %26
+  br label %33
+
+; <label>:33:                                     ; preds = %32
+  %34 = icmp eq i64 1, %28
+  br i1 %34, label %35, label %37
+
+; <label>:35:                                     ; preds = %33
+  %36 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %self, i32 0, i32 0
+  store i8 1, i8* %36, align 1
+  br label %44
+
+; <label>:37:                                     ; preds = %33
+  br label %38
+
+; <label>:38:                                     ; preds = %37
+  %39 = icmp eq i64 2, %28
+  br i1 %39, label %40, label %42
+
+; <label>:40:                                     ; preds = %38
+  %41 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %self, i32 0, i32 0
+  store i8 2, i8* %41, align 1
+  br label %44
+
+; <label>:42:                                     ; preds = %38
+  br label %43
+
+; <label>:43:                                     ; preds = %42
+  br label %48
+
+; <label>:44:                                     ; preds = %30, %35, %40
+  %45 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %self, i32 0, i32 0
+  %46 = load i8, i8* %45, align 1
+  call void @swift_bridgeObjectRelease(%swift.bridge* %0) #4
+  %47 = bitcast %T7sample213LinkParameterO* %self to i8*
+  call void @llvm.lifetime.end.p0i8(i64 1, i8* %47)
+  br label %50
+
+; <label>:48:                                     ; preds = %43
+  call void @swift_bridgeObjectRelease(%swift.bridge* %0) #4
+  %49 = bitcast %T7sample213LinkParameterO* %self to i8*
+  call void @llvm.lifetime.end.p0i8(i64 1, i8* %49)
+  br label %50
+
+; <label>:50:                                     ; preds = %44, %48
+  %51 = phi i8 [ 3, %48 ], [ %46, %44 ]
+  ret i8 %51
+}
+
+declare swiftcc %Ts27_ContiguousArrayStorageBaseC* @"Swift.Array.init(arrayLiteral: A...) -> [A]"(%Ts27_ContiguousArrayStorageBaseC*, %swift.type*) #0
+
+declare swiftcc i64 @"Swift._findStringSwitchCase(cases: [Swift.StaticString], string: Swift.String) -> Swift.Int"(%Ts27_ContiguousArrayStorageBaseC*, %swift.bridge*, i64) #0
+
+define protected swiftcc { %swift.bridge*, i64 } @"sample2.LinkParameter.rawValue.getter : Swift.String"(i8) #0 {
+entry:
+  switch i8 %0, label %1 [
+    i8 0, label %2
+    i8 1, label %6
+    i8 2, label %10
+  ]
+
+; <label>:1:                                      ; preds = %entry
+  unreachable
+
+; <label>:2:                                      ; preds = %entry
+  %3 = call swiftcc { %swift.bridge*, i64 } @"Swift.String.init(_builtinStringLiteral: Builtin.RawPointer, utf8CodeUnitCount: Builtin.Word, isASCII: Builtin.Int1) -> Swift.String"(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @2, i64 0, i64 0), i64 3, i1 true)
+  %4 = extractvalue { %swift.bridge*, i64 } %3, 0
+  %5 = extractvalue { %swift.bridge*, i64 } %3, 1
+  br label %14
+
+; <label>:6:                                      ; preds = %entry
+  %7 = call swiftcc { %swift.bridge*, i64 } @"Swift.String.init(_builtinStringLiteral: Builtin.RawPointer, utf8CodeUnitCount: Builtin.Word, isASCII: Builtin.Int1) -> Swift.String"(i8* getelementptr inbounds ([5 x i8], [5 x i8]* @3, i64 0, i64 0), i64 4, i1 true)
+  %8 = extractvalue { %swift.bridge*, i64 } %7, 0
+  %9 = extractvalue { %swift.bridge*, i64 } %7, 1
+  br label %14
+
+; <label>:10:                                     ; preds = %entry
+  %11 = call swiftcc { %swift.bridge*, i64 } @"Swift.String.init(_builtinStringLiteral: Builtin.RawPointer, utf8CodeUnitCount: Builtin.Word, isASCII: Builtin.Int1) -> Swift.String"(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @4, i64 0, i64 0), i64 3, i1 true)
+  %12 = extractvalue { %swift.bridge*, i64 } %11, 0
+  %13 = extractvalue { %swift.bridge*, i64 } %11, 1
+  br label %14
+
+; <label>:14:                                     ; preds = %2, %6, %10
+  %15 = phi %swift.bridge* [ %12, %10 ], [ %8, %6 ], [ %4, %2 ]
+  %16 = phi i64 [ %13, %10 ], [ %9, %6 ], [ %5, %2 ]
+  %17 = insertvalue { %swift.bridge*, i64 } undef, %swift.bridge* %15, 0
+  %18 = insertvalue { %swift.bridge*, i64 } %17, i64 %16, 1
+  ret { %swift.bridge*, i64 } %18
+}
+
+define protected i8** @"protocol witness table accessor for sample2.LinkParameter : Swift.Equatable in sample2"() #0 {
+entry:
+  %0 = call i8** @swift_getGenericWitnessTable(%swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2", %swift.type* null, i8*** null) #4
+  ret i8** %0
+}
+
+declare swiftcc i1 @"dispatch thunk of static Swift.Equatable.== infix(A, A) -> Swift.Bool"(%swift.opaque* noalias nocapture, %swift.opaque* noalias nocapture, %swift.type* swiftself, %swift.type*, i8**) #0
+
+define linkonce_odr hidden swiftcc i1 @"protocol witness for static Swift.Equatable.== infix(A, A) -> Swift.Bool in conformance sample2.LinkParameter : Swift.Equatable in sample2"(%T7sample213LinkParameterO* noalias nocapture dereferenceable(1), %T7sample213LinkParameterO* noalias nocapture dereferenceable(1), %swift.type* swiftself, %swift.type* %Self, i8** %SelfWitnessTable) #0 {
+entry:
+  %3 = bitcast %T7sample213LinkParameterO* %0 to %swift.opaque*
+  %4 = bitcast %T7sample213LinkParameterO* %1 to %swift.opaque*
+  %5 = call i8** @"lazy protocol witness table accessor for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.RawRepresentable in sample2"() #9
+  %6 = call swiftcc i1 @"Swift.== infix<A where A: Swift.RawRepresentable, A.RawValue: Swift.Equatable>(A, A) -> Swift.Bool"(%swift.opaque* noalias nocapture %3, %swift.opaque* noalias nocapture %4, %swift.type* bitcast (i64* getelementptr inbounds (<{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>, <{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>* @"full type metadata for sample2.LinkParameter", i32 0, i32 1) to %swift.type*), i8** %5, i8** @"protocol witness table for Swift.String : Swift.Equatable in Swift") #10
+  ret i1 %6
+}
+
+; Function Attrs: nounwind readonly
+declare i8** @swift_getGenericWitnessTable(%swift.generic_witness_table_cache*, %swift.type*, i8***) #2
+
+define internal void @"instantiation function for generic protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2"(i8**, %swift.type*, i8**) #0 {
+entry:
+  %3 = bitcast i8** %2 to i8***
+  %4 = call i8** @"lazy protocol witness table accessor for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Equatable in sample2"() #9
+  %5 = bitcast i8** %4 to i8*
+  %6 = getelementptr inbounds i8*, i8** %0, i32 1
+  store i8* %5, i8** %6, align 8
+  ret void
+}
+
+; Function Attrs: nounwind readnone
+define linkonce_odr hidden i8** @"lazy protocol witness table accessor for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Equatable in sample2"() #1 {
+entry:
+  %0 = load i8**, i8*** @"lazy protocol witness table cache variable for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Equatable in sample2", align 8
+  %1 = icmp eq i8** %0, null
+  br i1 %1, label %cacheIsNull, label %cont
+
+cacheIsNull:                                      ; preds = %entry
+  %2 = call i8** @"protocol witness table accessor for sample2.LinkParameter : Swift.Equatable in sample2"() #9
+  store atomic i8** %2, i8*** @"lazy protocol witness table cache variable for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.Equatable in sample2" release, align 8
+  br label %cont
+
+cont:                                             ; preds = %cacheIsNull, %entry
+  %3 = phi i8** [ %0, %entry ], [ %2, %cacheIsNull ]
+  ret i8** %3
+}
+
+declare swiftcc i64 @"dispatch thunk of Swift.Hashable.hashValue.getter : Swift.Int"(%swift.opaque* noalias nocapture swiftself, %swift.type*, i8**) #0
+
+define linkonce_odr hidden swiftcc i64 @"protocol witness for Swift.Hashable.hashValue.getter : Swift.Int in conformance sample2.LinkParameter : Swift.Hashable in sample2"(%T7sample213LinkParameterO* noalias nocapture swiftself dereferenceable(1), %swift.type* %Self, i8** %SelfWitnessTable) #0 {
+entry:
+  %1 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %0, i32 0, i32 0
+  %2 = load i8, i8* %1, align 1
+  %3 = call swiftcc i64 @"sample2.LinkParameter.hashValue.getter : Swift.Int"(i8 %2) #10
+  ret i64 %3
+}
+
+declare swiftcc void @"dispatch thunk of Swift.Hashable.hash(into: inout Swift.Hasher) -> ()"(%Ts6HasherV* nocapture dereferenceable(40), %swift.opaque* noalias nocapture swiftself, %swift.type*, i8**) #0
+
+define linkonce_odr hidden swiftcc void @"protocol witness for Swift.Hashable.hash(into: inout Swift.Hasher) -> () in conformance sample2.LinkParameter : Swift.Hashable in sample2"(%Ts6HasherV* nocapture dereferenceable(40), %T7sample213LinkParameterO* noalias nocapture swiftself dereferenceable(1), %swift.type* %Self, i8** %SelfWitnessTable) #0 {
+entry:
+  %2 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %1, i32 0, i32 0
+  %3 = load i8, i8* %2, align 1
+  call swiftcc void @"sample2.LinkParameter.hash(into: inout Swift.Hasher) -> ()"(%Ts6HasherV* nocapture dereferenceable(40) %0, i8 %3) #10
+  ret void
+}
+
+declare swiftcc %swift.metadata_response @"type metadata accessor for Swift.String"(i64) #0
+
+define protected i8** @"protocol witness table accessor for sample2.LinkParameter : Swift.RawRepresentable in sample2"() #0 {
+entry:
+  %0 = call i8** @swift_getGenericWitnessTable(%swift.generic_witness_table_cache* @"generic protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2", %swift.type* null, i8*** null) #4
+  ret i8** %0
+}
+
+declare swiftcc void @"dispatch thunk of Swift.RawRepresentable.init(rawValue: A.RawValue) -> A?"(%TSq.0* noalias nocapture sret, %swift.opaque* noalias nocapture, %swift.type* swiftself, %swift.type*, i8**) #0
+
+define linkonce_odr hidden swiftcc void @"protocol witness for Swift.RawRepresentable.init(rawValue: A.RawValue) -> A? in conformance sample2.LinkParameter : Swift.RawRepresentable in sample2"(%T7sample213LinkParameterOSg* noalias nocapture sret, %TSS* noalias nocapture dereferenceable(16), %swift.type* swiftself, %swift.type* %Self, i8** %SelfWitnessTable) #0 {
+entry:
+  %._guts = getelementptr inbounds %TSS, %TSS* %1, i32 0, i32 0
+  %._guts._object = getelementptr inbounds %Ts11_StringGutsV, %Ts11_StringGutsV* %._guts, i32 0, i32 0
+  %._guts._object._object = getelementptr inbounds %Ts13_StringObjectV, %Ts13_StringObjectV* %._guts._object, i32 0, i32 0
+  %3 = load %swift.bridge*, %swift.bridge** %._guts._object._object, align 8
+  %._guts._otherBits = getelementptr inbounds %Ts11_StringGutsV, %Ts11_StringGutsV* %._guts, i32 0, i32 1
+  %._guts._otherBits._value = getelementptr inbounds %TSu, %TSu* %._guts._otherBits, i32 0, i32 0
+  %4 = load i64, i64* %._guts._otherBits._value, align 8
+  %5 = call swiftcc i8 @"sample2.LinkParameter.init(rawValue: Swift.String) -> sample2.LinkParameter?"(%swift.bridge* %3, i64 %4) #10
+  %6 = bitcast %T7sample213LinkParameterOSg* %0 to i8*
+  store i8 %5, i8* %6, align 1
+  ret void
+}
+
+declare swiftcc void @"dispatch thunk of Swift.RawRepresentable.rawValue.getter : A.RawValue"(%swift.opaque* noalias nocapture sret, %swift.opaque* noalias nocapture swiftself, %swift.type*, i8**) #0
+
+define linkonce_odr hidden swiftcc void @"protocol witness for Swift.RawRepresentable.rawValue.getter : A.RawValue in conformance sample2.LinkParameter : Swift.RawRepresentable in sample2"(%TSS* noalias nocapture sret, %T7sample213LinkParameterO* noalias nocapture swiftself dereferenceable(1), %swift.type* %Self, i8** %SelfWitnessTable) #0 {
+entry:
+  %2 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %1, i32 0, i32 0
+  %3 = load i8, i8* %2, align 1
+  %4 = call swiftcc { %swift.bridge*, i64 } @"sample2.LinkParameter.rawValue.getter : Swift.String"(i8 %3) #10
+  %5 = extractvalue { %swift.bridge*, i64 } %4, 0
+  %6 = extractvalue { %swift.bridge*, i64 } %4, 1
+  %._guts = getelementptr inbounds %TSS, %TSS* %0, i32 0, i32 0
+  %._guts._object = getelementptr inbounds %Ts11_StringGutsV, %Ts11_StringGutsV* %._guts, i32 0, i32 0
+  %._guts._object._object = getelementptr inbounds %Ts13_StringObjectV, %Ts13_StringObjectV* %._guts._object, i32 0, i32 0
+  store %swift.bridge* %5, %swift.bridge** %._guts._object._object, align 8
+  %._guts._otherBits = getelementptr inbounds %Ts11_StringGutsV, %Ts11_StringGutsV* %._guts, i32 0, i32 1
+  %._guts._otherBits._value = getelementptr inbounds %TSu, %TSu* %._guts._otherBits, i32 0, i32 0
+  store i64 %6, i64* %._guts._otherBits._value, align 8
+  ret void
+}
+
+; Function Attrs: nounwind
+define linkonce_odr hidden i8* @__swift_memcpy1_1(i8*, i8*, %swift.type*) #4 {
+entry:
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %0, i8* %1, i64 1, i32 1, i1 false)
+  ret i8* %0
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memcpy.p0i8.p0i8.i64(i8* nocapture writeonly, i8* nocapture readonly, i64, i32, i1) #5
+
+; Function Attrs: nounwind
+define linkonce_odr hidden void @__swift_noop_void_return(i8*, %swift.type*) #4 {
+entry:
+  ret void
+}
+
+; Function Attrs: nounwind readonly
+define linkonce_odr hidden i32 @"getEnumTagSinglePayload value witness for sample2.LinkParameter"(%swift.opaque* noalias %value, i32 %numEmptyCases, %swift.type* %LinkParameter) #7 {
+entry:
+  %0 = alloca i32, align 4
+  %1 = alloca i32, align 4
+  %2 = bitcast %swift.opaque* %value to %T7sample213LinkParameterO*
+  %3 = icmp eq i32 0, %numEmptyCases
+  br i1 %3, label %37, label %4
+
+; <label>:4:                                      ; preds = %entry
+  %5 = icmp ugt i32 %numEmptyCases, 253
+  br i1 %5, label %6, label %30
+
+; <label>:6:                                      ; preds = %4
+  store i32 0, i32* %0, align 4
+  %7 = sub i32 %numEmptyCases, 253
+  %8 = add i32 255, %7
+  %9 = lshr i32 %8, 8
+  %10 = add i32 %9, 1
+  %11 = icmp ult i32 %10, 256
+  br i1 %11, label %15, label %12
+
+; <label>:12:                                     ; preds = %6
+  %13 = icmp ult i32 %10, 65536
+  %14 = select i1 %13, i32 2, i32 4
+  br label %15
+
+; <label>:15:                                     ; preds = %12, %6
+  %16 = phi i32 [ 1, %6 ], [ %14, %12 ]
+  %17 = bitcast %T7sample213LinkParameterO* %2 to i8*
+  %18 = getelementptr inbounds i8, i8* %17, i32 1
+  %19 = bitcast i32* %0 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i32(i8* %19, i8* %18, i32 %16, i32 1, i1 false)
+  %20 = load i32, i32* %0, align 4
+  %21 = icmp eq i32 %20, 0
+  br i1 %21, label %30, label %22
+
+; <label>:22:                                     ; preds = %15
+  store i32 0, i32* %1, align 4
+  %23 = sub i32 %20, 1
+  %24 = shl i32 %23, 8
+  %25 = select i1 false, i32 0, i32 %24
+  %26 = bitcast i32* %1 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %26, i8* %17, i64 1, i32 1, i1 false)
+  %27 = load i32, i32* %1, align 4
+  %28 = or i32 %27, %25
+  %29 = add i32 253, %28
+  br label %38
+
+; <label>:30:                                     ; preds = %15, %4
+  %31 = bitcast %T7sample213LinkParameterO* %2 to i8*
+  %32 = load i8, i8* %31, align 1
+  %33 = zext i8 %32 to i32
+  %34 = sub i32 %33, 3
+  %35 = icmp slt i32 %34, 0
+  %36 = select i1 %35, i32 -1, i32 %34
+  br label %38
+
+; <label>:37:                                     ; preds = %entry
+  br label %38
+
+; <label>:38:                                     ; preds = %37, %30, %22
+  %39 = phi i32 [ %36, %30 ], [ %29, %22 ], [ -1, %37 ]
+  %40 = add i32 %39, 1
+  ret i32 %40
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memcpy.p0i8.p0i8.i32(i8* nocapture writeonly, i8* nocapture readonly, i32, i32, i1) #5
+
+; Function Attrs: nounwind
+define linkonce_odr hidden void @"storeEnumTagSinglePayload value witness for sample2.LinkParameter"(%swift.opaque* noalias %value, i32 %whichCase, i32 %numEmptyCases, %swift.type* %LinkParameter) #8 {
+entry:
+  %0 = alloca i32, align 4
+  %1 = alloca i32, align 4
+  %2 = bitcast %swift.opaque* %value to %T7sample213LinkParameterO*
+  %3 = bitcast %T7sample213LinkParameterO* %2 to i8*
+  %4 = getelementptr inbounds i8, i8* %3, i32 1
+  %5 = icmp ugt i32 %numEmptyCases, 253
+  br i1 %5, label %6, label %17
+
+; <label>:6:                                      ; preds = %entry
+  %7 = sub i32 %numEmptyCases, 253
+  %8 = add i32 255, %7
+  %9 = lshr i32 %8, 8
+  %10 = add i32 %9, 1
+  %11 = icmp ult i32 %10, 256
+  br i1 %11, label %15, label %12
+
+; <label>:12:                                     ; preds = %6
+  %13 = icmp ult i32 %10, 65536
+  %14 = select i1 %13, i32 2, i32 4
+  br label %15
+
+; <label>:15:                                     ; preds = %12, %6
+  %16 = phi i32 [ 1, %6 ], [ %14, %12 ]
+  br label %17
+
+; <label>:17:                                     ; preds = %15, %entry
+  %18 = phi i32 [ 0, %entry ], [ %16, %15 ]
+  %19 = icmp ule i32 %whichCase, 253
+  br i1 %19, label %20, label %36
+
+; <label>:20:                                     ; preds = %17
+  %21 = icmp eq i32 %18, 0
+  br i1 %21, label %29, label %22
+
+; <label>:22:                                     ; preds = %20
+  %23 = icmp eq i32 %18, 1
+  br i1 %23, label %26, label %24
+
+; <label>:24:                                     ; preds = %22
+  %25 = icmp eq i32 %18, 2
+  br i1 %25, label %27, label %28
+
+; <label>:26:                                     ; preds = %22
+  call void @llvm.memset.p0i8.i64(i8* %4, i8 0, i64 1, i32 1, i1 false)
+  br label %29
+
+; <label>:27:                                     ; preds = %24
+  call void @llvm.memset.p0i8.i64(i8* %4, i8 0, i64 2, i32 1, i1 false)
+  br label %29
+
+; <label>:28:                                     ; preds = %24
+  call void @llvm.memset.p0i8.i64(i8* %4, i8 0, i64 4, i32 1, i1 false)
+  br label %29
+
+; <label>:29:                                     ; preds = %28, %27, %26, %20
+  %30 = icmp eq i32 %whichCase, 0
+  br i1 %30, label %60, label %31
+
+; <label>:31:                                     ; preds = %29
+  %32 = sub i32 %whichCase, 1
+  %33 = bitcast %T7sample213LinkParameterO* %2 to i8*
+  %34 = trunc i32 %32 to i8
+  %35 = add i8 %34, 3
+  store i8 %35, i8* %33, align 1
+  br label %60
+
+; <label>:36:                                     ; preds = %17
+  %37 = sub i32 %whichCase, 1
+  %38 = sub i32 %37, 253
+  br i1 false, label %43, label %39
+
+; <label>:39:                                     ; preds = %36
+  %40 = lshr i32 %38, 8
+  %41 = add i32 1, %40
+  %42 = and i32 255, %38
+  br label %43
+
+; <label>:43:                                     ; preds = %39, %36
+  %44 = phi i32 [ 1, %36 ], [ %41, %39 ]
+  %45 = phi i32 [ %38, %36 ], [ %42, %39 ]
+  store i32 %45, i32* %0, align 4
+  store i32 %44, i32* %1, align 4
+  %46 = bitcast i32* %0 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %3, i8* %46, i64 1, i32 1, i1 false)
+  %47 = getelementptr inbounds i8, i8* %3, i32 4
+  %48 = icmp eq i32 %18, 0
+  br i1 %48, label %59, label %49
+
+; <label>:49:                                     ; preds = %43
+  %50 = icmp eq i32 %18, 1
+  br i1 %50, label %53, label %51
+
+; <label>:51:                                     ; preds = %49
+  %52 = icmp eq i32 %18, 2
+  br i1 %52, label %55, label %57
+
+; <label>:53:                                     ; preds = %49
+  %54 = bitcast i32* %1 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %4, i8* %54, i64 1, i32 1, i1 false)
+  br label %59
+
+; <label>:55:                                     ; preds = %51
+  %56 = bitcast i32* %1 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %4, i8* %56, i64 2, i32 1, i1 false)
+  br label %59
+
+; <label>:57:                                     ; preds = %51
+  %58 = bitcast i32* %1 to i8*
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %4, i8* %58, i64 4, i32 1, i1 false)
+  br label %59
+
+; <label>:59:                                     ; preds = %57, %55, %53, %43
+  br label %60
+
+; <label>:60:                                     ; preds = %59, %31, %29
+  ret void
+}
+
+; Function Attrs: argmemonly nounwind
+declare void @llvm.memset.p0i8.i64(i8* nocapture writeonly, i8, i64, i32, i1) #5
+
+; Function Attrs: nounwind
+define linkonce_odr hidden void @"storeExtraInhabitant value witness for sample2.LinkParameter"(%swift.opaque* noalias %dest, i32 %index, %swift.type* %LinkParameter) #8 {
+entry:
+  %0 = bitcast %swift.opaque* %dest to %T7sample213LinkParameterO*
+  %1 = bitcast %T7sample213LinkParameterO* %0 to i8*
+  %2 = trunc i32 %index to i8
+  %3 = add i8 %2, 3
+  store i8 %3, i8* %1, align 1
+  ret void
+}
+
+; Function Attrs: nounwind
+define linkonce_odr hidden i32 @"getExtraInhabitantIndex value witness for sample2.LinkParameter"(%swift.opaque* noalias %src, %swift.type* %LinkParameter) #8 {
+entry:
+  %0 = bitcast %swift.opaque* %src to %T7sample213LinkParameterO*
+  %1 = bitcast %T7sample213LinkParameterO* %0 to i8*
+  %2 = load i8, i8* %1, align 1
+  %3 = zext i8 %2 to i32
+  %4 = sub i32 %3, 3
+  %5 = icmp slt i32 %4, 0
+  %6 = select i1 %5, i32 -1, i32 %4
+  ret i32 %6
+}
+
+; Function Attrs: nounwind
+define linkonce_odr hidden i32 @"getEnumTag value witness for sample2.LinkParameter"(%swift.opaque* noalias %value, %swift.type* %LinkParameter) #8 {
+entry:
+  %0 = bitcast %swift.opaque* %value to %T7sample213LinkParameterO*
+  %1 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %0, i32 0, i32 0
+  %2 = load i8, i8* %1, align 1
+  %3 = zext i8 %2 to i32
+  ret i32 %3
+}
+
+; Function Attrs: nounwind
+define linkonce_odr hidden void @"destructiveProjectEnumData value witness for sample2.LinkParameter"(%swift.opaque* noalias %value, %swift.type* %LinkParameter) #8 {
+entry:
+  ret void
+}
+
+; Function Attrs: nounwind
+define linkonce_odr hidden void @"destructiveInjectEnumTag value witness for sample2.LinkParameter"(%swift.opaque* noalias %value, i32 %tag, %swift.type* %LinkParameter) #8 {
+entry:
+  %0 = bitcast %swift.opaque* %value to %T7sample213LinkParameterO*
+  %1 = trunc i32 %tag to i8
+  %2 = getelementptr inbounds %T7sample213LinkParameterO, %T7sample213LinkParameterO* %0, i32 0, i32 0
+  store i8 %1, i8* %2, align 1
+  ret void
+}
+
+; Function Attrs: nounwind readnone
+define protected swiftcc %swift.metadata_response @"type metadata accessor for sample2.LinkParameter"(i64) #1 {
+entry:
+  ret %swift.metadata_response { %swift.type* bitcast (i64* getelementptr inbounds (<{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>, <{ i8**, i64, <{ i32, i32, i32, i32, i32, i32 }>* }>* @"full type metadata for sample2.LinkParameter", i32 0, i32 1) to %swift.type*), i64 0 }
+}
+
+declare swiftcc i1 @"Swift.== infix<A where A: Swift.RawRepresentable, A.RawValue: Swift.Equatable>(A, A) -> Swift.Bool"(%swift.opaque* noalias nocapture, %swift.opaque* noalias nocapture, %swift.type*, i8**, i8**) #0
+
+; Function Attrs: nounwind readnone
+define linkonce_odr hidden i8** @"lazy protocol witness table accessor for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.RawRepresentable in sample2"() #1 {
+entry:
+  %0 = load i8**, i8*** @"lazy protocol witness table cache variable for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.RawRepresentable in sample2", align 8
+  %1 = icmp eq i8** %0, null
+  br i1 %1, label %cacheIsNull, label %cont
+
+cacheIsNull:                                      ; preds = %entry
+  %2 = call i8** @"protocol witness table accessor for sample2.LinkParameter : Swift.RawRepresentable in sample2"() #9
+  store atomic i8** %2, i8*** @"lazy protocol witness table cache variable for type sample2.LinkParameter and conformance sample2.LinkParameter : Swift.RawRepresentable in sample2" release, align 8
+  br label %cont
+
+cont:                                             ; preds = %cacheIsNull, %entry
+  %3 = phi i8** [ %0, %entry ], [ %2, %cacheIsNull ]
+  ret i8** %3
+}
+
+attributes #0 = { "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" }
+attributes #1 = { nounwind readnone "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" }
+attributes #2 = { nounwind readonly }
+attributes #3 = { noreturn nounwind }
+attributes #4 = { nounwind }
+attributes #5 = { argmemonly nounwind }
+attributes #6 = { noinline nounwind }
+attributes #7 = { nounwind readonly "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" }
+attributes #8 = { nounwind "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" }
+attributes #9 = { nounwind readnone }
+attributes #10 = { noinline }
+
+!llvm.asan.globals = !{!0, !1, !2, !3, !4, !5, !6, !7, !8, !9, !10, !11, !12, !13, !14, !15, !16, !17}
+!llvm.linker.options = !{}
+!llvm.module.flags = !{!18, !19, !20, !21}
+
+!0 = !{{ i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.Equatable in sample2", null, null, i1 false, i1 true}
+!1 = !{{ i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.Hashable in sample2", null, null, i1 false, i1 true}
+!2 = !{{ i32, i32, i32, i32, i32 }* @"resilient protocol witness table for sample2.LinkParameter : Swift.RawRepresentable in sample2", null, null, i1 false, i1 true}
+!3 = !{<{ i32, i32, i32 }>* @"module descriptor sample2", null, null, i1 false, i1 true}
+!4 = !{<{ i32, i32, i32, i32, i32, i32 }>* @"nominal type descriptor for sample2.LinkParameter", null, null, i1 false, i1 true}
+!5 = !{<{ [1 x i8], i32, i8 }>* @"symbolic \01____ 7sample213LinkParameterO", null, null, i1 false, i1 true}
+!6 = !{[4 x i8]* @10, null, null, i1 false, i1 true}
+!7 = !{[5 x i8]* @11, null, null, i1 false, i1 true}
+!8 = !{[4 x i8]* @12, null, null, i1 false, i1 true}
+!9 = !{{ i32, i32, i16, i16, i32, i32, i32, i32, i32, i32, i32, i32, i32, i32 }* @"reflection metadata field descriptor sample2.LinkParameter", null, null, i1 false, i1 true}
+!10 = !{<{ [24 x i8], i8 }>* @"symbolic 7sample213LinkParameterO", null, null, i1 false, i1 true}
+!11 = !{<{ [22 x i8], i8 }>* @"symbolic Swift.RawRepresentable", null, null, i1 false, i1 true}
+!12 = !{[9 x i8]* @13, null, null, i1 false, i1 true}
+!13 = !{<{ [2 x i8], i8 }>* @"symbolic SS", null, null, i1 false, i1 true}
+!14 = !{{ i32, i32, i32, i32, i32, i32 }* @"reflection metadata associated type descriptor sample2.LinkParameter : Swift.RawRepresentable in sample2", null, null, i1 false, i1 true}
+!15 = !{[3 x i32]* @"\01l_protocol_conformances", null, null, i1 false, i1 true}
+!16 = !{[1 x %swift.type_metadata_record]* @"\01l_type_metadata_table", null, null, i1 false, i1 true}
+!17 = !{[23 x i8*]* @llvm.used, null, null, i1 false, i1 true}
+!18 = !{i32 1, !"wchar_size", i32 4}
+!19 = !{i32 7, !"PIC Level", i32 2}
+!20 = !{i32 4, !"Objective-C Garbage Collection", i32 1536}
+!21 = !{i32 1, !"Swift Version", i32 6}

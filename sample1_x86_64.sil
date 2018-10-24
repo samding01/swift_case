@@ -1,0 +1,591 @@
+sil_stage canonical
+
+import Builtin
+import Swift
+import SwiftShims
+
+public enum LinkParameter : String {
+  case val
+  case type
+  case rel
+  typealias RawValue = String
+  var hashValue: Int { get }
+  func hash(into hasher: inout Hasher)
+  @inlinable init?(rawValue: String)
+  var rawValue: String { get }
+}
+
+var linkParameters: [LinkParameter : String]
+
+var headerValue: String
+
+// linkParameters
+sil_global hidden @$S14sample1_x86_6414linkParametersSDyAA13LinkParameterOSSGvp : $Dictionary<LinkParameter, String>
+
+// headerValue
+sil_global hidden @$S14sample1_x86_6411headerValueSSvp : $String
+
+// main
+sil @main : $@convention(c) (Int32, UnsafeMutablePointer<Optional<UnsafeMutablePointer<Int8>>>) -> Int32 {
+bb0(%0 : $Int32, %1 : $UnsafeMutablePointer<Optional<UnsafeMutablePointer<Int8>>>):
+  alloc_global @$S14sample1_x86_6414linkParametersSDyAA13LinkParameterOSSGvp // id: %2
+  %3 = global_addr @$S14sample1_x86_6414linkParametersSDyAA13LinkParameterOSSGvp : $*Dictionary<LinkParameter, String> // users: %27, %38
+  %4 = metatype $@thin Dictionary<LinkParameter, String>.Type // user: %26
+  %5 = integer_literal $Builtin.Word, 1           // user: %7
+  // function_ref _allocateUninitializedArray<A>(_:)
+  %6 = function_ref @$Ss27_allocateUninitializedArrayySayxG_BptBwlF : $@convention(thin) <τ_0_0> (Builtin.Word) -> (@owned Array<τ_0_0>, Builtin.RawPointer) // user: %7
+  %7 = apply %6<(LinkParameter, String)>(%5) : $@convention(thin) <τ_0_0> (Builtin.Word) -> (@owned Array<τ_0_0>, Builtin.RawPointer) // users: %11, %8, %10
+  %8 = tuple_extract %7 : $(Array<(LinkParameter, String)>, Builtin.RawPointer), 0 // users: %26, %9
+  retain_value %8 : $Array<(LinkParameter, String)> // id: %9
+  %10 = tuple_extract %7 : $(Array<(LinkParameter, String)>, Builtin.RawPointer), 1 // user: %12
+  release_value %7 : $(Array<(LinkParameter, String)>, Builtin.RawPointer) // id: %11
+  %12 = pointer_to_address %10 : $Builtin.RawPointer to [strict] $*(LinkParameter, String) // users: %14, %13
+  %13 = tuple_element_addr %12 : $*(LinkParameter, String), 0 // user: %17
+  %14 = tuple_element_addr %12 : $*(LinkParameter, String), 1 // user: %24
+  %15 = metatype $@thin LinkParameter.Type
+  %16 = enum $LinkParameter, #LinkParameter.rel!enumelt // user: %17
+  store %16 to %13 : $*LinkParameter              // id: %17
+  %18 = string_literal utf8 "root"                // user: %23
+  %19 = integer_literal $Builtin.Word, 4          // user: %23
+  %20 = integer_literal $Builtin.Int1, -1         // user: %23
+  %21 = metatype $@thin String.Type               // user: %23
+  // function_ref String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+  %22 = function_ref @$SSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %23
+  %23 = apply %22(%18, %19, %20, %21) : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %24
+  store %23 to %14 : $*String                     // id: %24
+  // function_ref Dictionary.init(dictionaryLiteral:)
+  %25 = function_ref @$SSD17dictionaryLiteralSDyxq_Gx_q_td_tcfC : $@convention(method) <τ_0_0, τ_0_1 where τ_0_0 : Hashable> (@owned Array<(τ_0_0, τ_0_1)>, @thin Dictionary<τ_0_0, τ_0_1>.Type) -> @owned Dictionary<τ_0_0, τ_0_1> // user: %26
+  %26 = apply %25<LinkParameter, String>(%8, %4) : $@convention(method) <τ_0_0, τ_0_1 where τ_0_0 : Hashable> (@owned Array<(τ_0_0, τ_0_1)>, @thin Dictionary<τ_0_0, τ_0_1>.Type) -> @owned Dictionary<τ_0_0, τ_0_1> // user: %27
+  store %26 to %3 : $*Dictionary<LinkParameter, String> // id: %27
+  alloc_global @$S14sample1_x86_6411headerValueSSvp // id: %28
+  %29 = global_addr @$S14sample1_x86_6411headerValueSSvp : $*String // user: %36
+  %30 = string_literal utf8 ""                    // user: %35
+  %31 = integer_literal $Builtin.Word, 0          // user: %35
+  %32 = integer_literal $Builtin.Int1, -1         // user: %35
+  %33 = metatype $@thin String.Type               // user: %35
+  // function_ref String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+  %34 = function_ref @$SSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %35
+  %35 = apply %34(%30, %31, %32, %33) : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %36
+  store %35 to %29 : $*String                     // id: %36
+  %37 = alloc_stack $DictionaryIterator<LinkParameter, String>, var, name "$generator" // users: %45, %77, %76, %48
+  %38 = begin_access [read] [dynamic] %3 : $*Dictionary<LinkParameter, String> // users: %39, %41
+  %39 = load %38 : $*Dictionary<LinkParameter, String> // users: %44, %43, %40
+  retain_value %39 : $Dictionary<LinkParameter, String> // id: %40
+  end_access %38 : $*Dictionary<LinkParameter, String> // id: %41
+  // function_ref Dictionary.makeIterator()
+  %42 = function_ref @$SSD12makeIterators010DictionaryB0Vyxq_GyF : $@convention(method) <τ_0_0, τ_0_1 where τ_0_0 : Hashable> (@guaranteed Dictionary<τ_0_0, τ_0_1>) -> @owned DictionaryIterator<τ_0_0, τ_0_1> // user: %43
+  %43 = apply %42<LinkParameter, String>(%39) : $@convention(method) <τ_0_0, τ_0_1 where τ_0_0 : Hashable> (@guaranteed Dictionary<τ_0_0, τ_0_1>) -> @owned DictionaryIterator<τ_0_0, τ_0_1> // user: %45
+  release_value %39 : $Dictionary<LinkParameter, String> // id: %44
+  store %43 to %37 : $*DictionaryIterator<LinkParameter, String> // id: %45
+  br bb1                                          // id: %46
+
+bb1:                                              // Preds: bb6 bb0
+  %47 = alloc_stack $Optional<(key: LinkParameter, value: String)> // users: %52, %63, %54, %50
+  %48 = begin_access [modify] [static] %37 : $*DictionaryIterator<LinkParameter, String> // users: %51, %50
+  // function_ref DictionaryIterator.next()
+  %49 = function_ref @$Ss18DictionaryIteratorV4nextx3key_q_5valuetSgyF : $@convention(method) <τ_0_0, τ_0_1 where τ_0_0 : Hashable> (@inout DictionaryIterator<τ_0_0, τ_0_1>) -> @out Optional<(key: τ_0_0, value: τ_0_1)> // user: %50
+  %50 = apply %49<LinkParameter, String>(%47, %48) : $@convention(method) <τ_0_0, τ_0_1 where τ_0_0 : Hashable> (@inout DictionaryIterator<τ_0_0, τ_0_1>) -> @out Optional<(key: τ_0_0, value: τ_0_1)>
+  end_access %48 : $*DictionaryIterator<LinkParameter, String> // id: %51
+  %52 = load %47 : $*Optional<(key: LinkParameter, value: String)> // user: %53
+  switch_enum %52 : $Optional<(key: LinkParameter, value: String)>, case #Optional.some!enumelt.1: bb3, case #Optional.none!enumelt: bb2 // id: %53
+
+bb2:                                              // Preds: bb1
+  dealloc_stack %47 : $*Optional<(key: LinkParameter, value: String)> // id: %54
+  br bb8                                          // id: %55
+
+// %56                                            // users: %62, %57, %58
+bb3(%56 : $(key: LinkParameter, value: String)):  // Preds: bb1
+  %57 = tuple_extract %56 : $(key: LinkParameter, value: String), 0 // user: %60
+  %58 = tuple_extract %56 : $(key: LinkParameter, value: String), 1 // users: %60, %59
+  retain_value %58 : $String                      // id: %59
+  %60 = tuple (%57 : $LinkParameter, %58 : $String) // user: %61
+  %61 = enum $Optional<(LinkParameter, String)>, #Optional.some!enumelt.1, %60 : $(LinkParameter, String) // user: %64
+  release_value %56 : $(key: LinkParameter, value: String) // id: %62
+  dealloc_stack %47 : $*Optional<(key: LinkParameter, value: String)> // id: %63
+  br bb4(%61 : $Optional<(LinkParameter, String)>) // id: %64
+
+// %65                                            // user: %66
+bb4(%65 : $Optional<(LinkParameter, String)>):    // Preds: bb8 bb3
+  switch_enum %65 : $Optional<(LinkParameter, String)>, case #Optional.some!enumelt.1: bb6, case #Optional.none!enumelt: bb5 // id: %66
+
+bb5:                                              // Preds: bb4
+  br bb7                                          // id: %67
+
+// %68                                            // users: %74, %69, %70
+bb6(%68 : $(LinkParameter, String)):              // Preds: bb4
+  %69 = tuple_extract %68 : $(LinkParameter, String), 0 // users: %73, %71
+  %70 = tuple_extract %68 : $(LinkParameter, String), 1 // user: %72
+  debug_value %69 : $LinkParameter, let, name "linkParamer" // id: %71
+  debug_value %70 : $String, let, name "value"    // id: %72
+  debug_value %69 : $LinkParameter, let, name "tmp" // id: %73
+  release_value %68 : $(LinkParameter, String)    // id: %74
+  br bb1                                          // id: %75
+
+bb7:                                              // Preds: bb5
+  destroy_addr %37 : $*DictionaryIterator<LinkParameter, String> // id: %76
+  dealloc_stack %37 : $*DictionaryIterator<LinkParameter, String> // id: %77
+  %78 = integer_literal $Builtin.Int32, 0         // user: %79
+  %79 = struct $Int32 (%78 : $Builtin.Int32)      // user: %80
+  return %79 : $Int32                             // id: %80
+
+bb8:                                              // Preds: bb2
+  %81 = enum $Optional<(LinkParameter, String)>, #Optional.none!enumelt // user: %82
+  br bb4(%81 : $Optional<(LinkParameter, String)>) // id: %82
+} // end sil function 'main'
+
+// LinkParameter.hashValue.getter
+sil @$S14sample1_x86_6413LinkParameterO9hashValueSivg : $@convention(method) (LinkParameter) -> Int {
+// %0                                             // users: %3, %1
+bb0(%0 : $LinkParameter):
+  debug_value %0 : $LinkParameter, let, name "self", argno 1 // id: %1
+  %2 = alloc_stack $LinkParameter                 // users: %3, %6, %5
+  store %0 to %2 : $*LinkParameter                // id: %3
+  // function_ref _hashValue<A>(for:)
+  %4 = function_ref @$Ss10_hashValue3forSix_tSHRzlF : $@convention(thin) <τ_0_0 where τ_0_0 : Hashable> (@in_guaranteed τ_0_0) -> Int // user: %5
+  %5 = apply %4<LinkParameter>(%2) : $@convention(thin) <τ_0_0 where τ_0_0 : Hashable> (@in_guaranteed τ_0_0) -> Int // user: %7
+  dealloc_stack %2 : $*LinkParameter              // id: %6
+  return %5 : $Int                                // id: %7
+} // end sil function '$S14sample1_x86_6413LinkParameterO9hashValueSivg'
+
+// _hashValue<A>(for:)
+sil [serialized] [always_inline] @$Ss10_hashValue3forSix_tSHRzlF : $@convention(thin) <τ_0_0 where τ_0_0 : Hashable> (@in_guaranteed τ_0_0) -> Int
+
+// LinkParameter.hash(into:)
+sil @$S14sample1_x86_6413LinkParameterO4hash4intoys6HasherVz_tF : $@convention(method) (@inout Hasher, LinkParameter) -> () {
+// %0                                             // users: %29, %2
+// %1                                             // users: %5, %3
+bb0(%0 : $*Hasher, %1 : $LinkParameter):
+  debug_value_addr %0 : $*Hasher, var, name "hasher", argno 1 // id: %2
+  debug_value %1 : $LinkParameter, let, name "self", argno 2 // id: %3
+  %4 = alloc_stack $Int, var, name "discriminator" // users: %24, %20, %14, %8, %34
+  switch_enum %1 : $LinkParameter, case #LinkParameter.val!enumelt: bb1, case #LinkParameter.type!enumelt: bb2, case #LinkParameter.rel!enumelt: bb3 // id: %5
+
+bb1:                                              // Preds: bb0
+  %6 = integer_literal $Builtin.Int64, 0          // user: %7
+  %7 = struct $Int (%6 : $Builtin.Int64)          // user: %9
+  %8 = begin_access [modify] [static] %4 : $*Int  // users: %9, %10
+  store %7 to %8 : $*Int                          // id: %9
+  end_access %8 : $*Int                           // id: %10
+  br bb4                                          // id: %11
+
+bb2:                                              // Preds: bb0
+  %12 = integer_literal $Builtin.Int64, 1         // user: %13
+  %13 = struct $Int (%12 : $Builtin.Int64)        // user: %15
+  %14 = begin_access [modify] [static] %4 : $*Int // users: %15, %16
+  store %13 to %14 : $*Int                        // id: %15
+  end_access %14 : $*Int                          // id: %16
+  br bb4                                          // id: %17
+
+bb3:                                              // Preds: bb0
+  %18 = integer_literal $Builtin.Int64, 2         // user: %19
+  %19 = struct $Int (%18 : $Builtin.Int64)        // user: %21
+  %20 = begin_access [modify] [static] %4 : $*Int // users: %21, %22
+  store %19 to %20 : $*Int                        // id: %21
+  end_access %20 : $*Int                          // id: %22
+  br bb4                                          // id: %23
+
+bb4:                                              // Preds: bb3 bb2 bb1
+  %24 = begin_access [read] [static] %4 : $*Int   // users: %25, %26
+  %25 = load %24 : $*Int                          // user: %28
+  end_access %24 : $*Int                          // id: %26
+  %27 = alloc_stack $Int                          // users: %28, %33, %31
+  store %25 to %27 : $*Int                        // id: %28
+  %29 = begin_access [modify] [static] %0 : $*Hasher // users: %32, %31
+  // function_ref Hasher.combine<A>(_:)
+  %30 = function_ref @$Ss6HasherV7combineyyxSHRzlF : $@convention(method) <τ_0_0 where τ_0_0 : Hashable> (@in_guaranteed τ_0_0, @inout Hasher) -> () // user: %31
+  %31 = apply %30<Int>(%27, %29) : $@convention(method) <τ_0_0 where τ_0_0 : Hashable> (@in_guaranteed τ_0_0, @inout Hasher) -> ()
+  end_access %29 : $*Hasher                       // id: %32
+  dealloc_stack %27 : $*Int                       // id: %33
+  dealloc_stack %4 : $*Int                        // id: %34
+  %35 = tuple ()                                  // user: %36
+  return %35 : $()                                // id: %36
+} // end sil function '$S14sample1_x86_6413LinkParameterO4hash4intoys6HasherVz_tF'
+
+// Int.init(_builtinIntegerLiteral:)
+sil public_external [transparent] [serialized] @$SSi22_builtinIntegerLiteralSiBi2048__tcfC : $@convention(method) (Builtin.Int2048, @thin Int.Type) -> Int {
+// %0                                             // user: %2
+bb0(%0 : $Builtin.Int2048, %1 : $@thin Int.Type):
+  %2 = builtin "s_to_s_checked_trunc_Int2048_Int64"(%0 : $Builtin.Int2048) : $(Builtin.Int64, Builtin.Int1) // users: %4, %3
+  %3 = tuple_extract %2 : $(Builtin.Int64, Builtin.Int1), 0 // user: %5
+  %4 = tuple_extract %2 : $(Builtin.Int64, Builtin.Int1), 1
+  %5 = struct $Int (%3 : $Builtin.Int64)          // user: %6
+  return %5 : $Int                                // id: %6
+} // end sil function '$SSi22_builtinIntegerLiteralSiBi2048__tcfC'
+
+// Hasher.combine<A>(_:)
+sil [serialized] [always_inline] @$Ss6HasherV7combineyyxSHRzlF : $@convention(method) <τ_0_0 where τ_0_0 : Hashable> (@in_guaranteed τ_0_0, @inout Hasher) -> ()
+
+// LinkParameter.init(rawValue:)
+sil [serialized] @$S14sample1_x86_6413LinkParameterO8rawValueACSgSS_tcfC : $@convention(method) (@owned String, @thin LinkParameter.Type) -> Optional<LinkParameter> {
+// %0                                             // users: %100, %97, %50, %3
+bb0(%0 : $String, %1 : $@thin LinkParameter.Type):
+  %2 = alloc_stack $LinkParameter, var, name "self" // users: %95, %89, %75, %61, %98, %101
+  debug_value %0 : $String, let, name "rawValue", argno 1 // id: %3
+  %4 = metatype $@thin Array<StaticString>.Type   // user: %48
+  %5 = integer_literal $Builtin.Word, 3           // user: %7
+  // function_ref _allocateUninitializedArray<A>(_:)
+  %6 = function_ref @$Ss27_allocateUninitializedArrayySayxG_BptBwlF : $@convention(thin) <τ_0_0> (Builtin.Word) -> (@owned Array<τ_0_0>, Builtin.RawPointer) // user: %7
+  %7 = apply %6<StaticString>(%5) : $@convention(thin) <τ_0_0> (Builtin.Word) -> (@owned Array<τ_0_0>, Builtin.RawPointer) // users: %11, %8, %10
+  %8 = tuple_extract %7 : $(Array<StaticString>, Builtin.RawPointer), 0 // users: %48, %9
+  retain_value %8 : $Array<StaticString>          // id: %9
+  %10 = tuple_extract %7 : $(Array<StaticString>, Builtin.RawPointer), 1 // user: %12
+  release_value %7 : $(Array<StaticString>, Builtin.RawPointer) // id: %11
+  %12 = pointer_to_address %10 : $Builtin.RawPointer to [strict] $*StaticString // users: %22, %36, %24
+  %13 = string_literal utf8 "val"                 // user: %15
+  %14 = integer_literal $Builtin.Word, 3          // user: %19
+  %15 = builtin "ptrtoint_Word"(%13 : $Builtin.RawPointer) : $Builtin.Word // user: %19
+  br bb1                                          // id: %16
+
+bb1:                                              // Preds: bb0
+  %17 = integer_literal $Builtin.Int8, 2          // user: %19
+  br bb2                                          // id: %18
+
+bb2:                                              // Preds: bb1
+  %19 = struct $StaticString (%15 : $Builtin.Word, %14 : $Builtin.Word, %17 : $Builtin.Int8) // user: %22
+  br bb3                                          // id: %20
+
+bb3:                                              // Preds: bb2
+  br bb4                                          // id: %21
+
+bb4:                                              // Preds: bb3
+  store %19 to %12 : $*StaticString               // id: %22
+  %23 = integer_literal $Builtin.Word, 1          // user: %24
+  %24 = index_addr %12 : $*StaticString, %23 : $Builtin.Word // user: %34
+  %25 = string_literal utf8 "type"                // user: %27
+  %26 = integer_literal $Builtin.Word, 4          // user: %31
+  %27 = builtin "ptrtoint_Word"(%25 : $Builtin.RawPointer) : $Builtin.Word // user: %31
+  br bb5                                          // id: %28
+
+bb5:                                              // Preds: bb4
+  %29 = integer_literal $Builtin.Int8, 2          // user: %31
+  br bb6                                          // id: %30
+
+bb6:                                              // Preds: bb5
+  %31 = struct $StaticString (%27 : $Builtin.Word, %26 : $Builtin.Word, %29 : $Builtin.Int8) // user: %34
+  br bb7                                          // id: %32
+
+bb7:                                              // Preds: bb6
+  br bb8                                          // id: %33
+
+bb8:                                              // Preds: bb7
+  store %31 to %24 : $*StaticString               // id: %34
+  %35 = integer_literal $Builtin.Word, 2          // user: %36
+  %36 = index_addr %12 : $*StaticString, %35 : $Builtin.Word // user: %46
+  %37 = string_literal utf8 "rel"                 // user: %39
+  %38 = integer_literal $Builtin.Word, 3          // user: %43
+  %39 = builtin "ptrtoint_Word"(%37 : $Builtin.RawPointer) : $Builtin.Word // user: %43
+  br bb9                                          // id: %40
+
+bb9:                                              // Preds: bb8
+  %41 = integer_literal $Builtin.Int8, 2          // user: %43
+  br bb10                                         // id: %42
+
+bb10:                                             // Preds: bb9
+  %43 = struct $StaticString (%39 : $Builtin.Word, %38 : $Builtin.Word, %41 : $Builtin.Int8) // user: %46
+  br bb11                                         // id: %44
+
+bb11:                                             // Preds: bb10
+  br bb12                                         // id: %45
+
+bb12:                                             // Preds: bb11
+  store %43 to %36 : $*StaticString               // id: %46
+  // function_ref Array.init(arrayLiteral:)
+  %47 = function_ref @$SSa12arrayLiteralSayxGxd_tcfC : $@convention(method) <τ_0_0> (@owned Array<τ_0_0>, @thin Array<τ_0_0>.Type) -> @owned Array<τ_0_0> // user: %48
+  %48 = apply %47<StaticString>(%8, %4) : $@convention(method) <τ_0_0> (@owned Array<τ_0_0>, @thin Array<τ_0_0>.Type) -> @owned Array<τ_0_0> // users: %51, %50
+  // function_ref _findStringSwitchCase(cases:string:)
+  %49 = function_ref @$Ss21_findStringSwitchCase5cases6stringSiSays06StaticB0VG_SStF : $@convention(thin) (@guaranteed Array<StaticString>, @guaranteed String) -> Int // user: %50
+  %50 = apply %49(%48, %0) : $@convention(thin) (@guaranteed Array<StaticString>, @guaranteed String) -> Int // users: %82, %68, %54, %80, %66, %52
+  release_value %48 : $Array<StaticString>        // id: %51
+  debug_value %50 : $Int, let, name "$match"      // id: %52
+  %53 = integer_literal $Builtin.Int64, 0         // user: %55
+  %54 = struct_extract %50 : $Int, #Int._value    // user: %55
+  %55 = builtin "cmp_eq_Int64"(%53 : $Builtin.Int64, %54 : $Builtin.Int64) : $Builtin.Int1 // user: %56
+  %56 = struct $Bool (%55 : $Builtin.Int1)        // user: %57
+  %57 = struct_extract %56 : $Bool, #Bool._value  // user: %58
+  cond_br %57, bb13, bb14                         // id: %58
+
+bb13:                                             // Preds: bb12
+  %59 = metatype $@thin LinkParameter.Type
+  %60 = enum $LinkParameter, #LinkParameter.val!enumelt // user: %62
+  %61 = begin_access [modify] [static] %2 : $*LinkParameter // users: %62, %63
+  store %60 to %61 : $*LinkParameter              // id: %62
+  end_access %61 : $*LinkParameter                // id: %63
+  br bb22                                         // id: %64
+
+bb14:                                             // Preds: bb12
+  br bb15                                         // id: %65
+
+bb15:                                             // Preds: bb14
+  debug_value %50 : $Int, let, name "$match"      // id: %66
+  %67 = integer_literal $Builtin.Int64, 1         // user: %69
+  %68 = struct_extract %50 : $Int, #Int._value    // user: %69
+  %69 = builtin "cmp_eq_Int64"(%67 : $Builtin.Int64, %68 : $Builtin.Int64) : $Builtin.Int1 // user: %70
+  %70 = struct $Bool (%69 : $Builtin.Int1)        // user: %71
+  %71 = struct_extract %70 : $Bool, #Bool._value  // user: %72
+  cond_br %71, bb16, bb17                         // id: %72
+
+bb16:                                             // Preds: bb15
+  %73 = metatype $@thin LinkParameter.Type
+  %74 = enum $LinkParameter, #LinkParameter.type!enumelt // user: %76
+  %75 = begin_access [modify] [static] %2 : $*LinkParameter // users: %76, %77
+  store %74 to %75 : $*LinkParameter              // id: %76
+  end_access %75 : $*LinkParameter                // id: %77
+  br bb22                                         // id: %78
+
+bb17:                                             // Preds: bb15
+  br bb18                                         // id: %79
+
+bb18:                                             // Preds: bb17
+  debug_value %50 : $Int, let, name "$match"      // id: %80
+  %81 = integer_literal $Builtin.Int64, 2         // user: %83
+  %82 = struct_extract %50 : $Int, #Int._value    // user: %83
+  %83 = builtin "cmp_eq_Int64"(%81 : $Builtin.Int64, %82 : $Builtin.Int64) : $Builtin.Int1 // user: %84
+  %84 = struct $Bool (%83 : $Builtin.Int1)        // user: %85
+  %85 = struct_extract %84 : $Bool, #Bool._value  // user: %86
+  cond_br %85, bb19, bb20                         // id: %86
+
+bb19:                                             // Preds: bb18
+  %87 = metatype $@thin LinkParameter.Type
+  %88 = enum $LinkParameter, #LinkParameter.rel!enumelt // user: %90
+  %89 = begin_access [modify] [static] %2 : $*LinkParameter // users: %90, %91
+  store %88 to %89 : $*LinkParameter              // id: %90
+  end_access %89 : $*LinkParameter                // id: %91
+  br bb22                                         // id: %92
+
+bb20:                                             // Preds: bb18
+  br bb21                                         // id: %93
+
+bb21:                                             // Preds: bb20
+  br bb23                                         // id: %94
+
+bb22:                                             // Preds: bb19 bb16 bb13
+  %95 = load %2 : $*LinkParameter                 // user: %96
+  %96 = enum $Optional<LinkParameter>, #Optional.some!enumelt.1, %95 : $LinkParameter // user: %99
+  release_value %0 : $String                      // id: %97
+  dealloc_stack %2 : $*LinkParameter              // id: %98
+  br bb24(%96 : $Optional<LinkParameter>)         // id: %99
+
+bb23:                                             // Preds: bb21
+  release_value %0 : $String                      // id: %100
+  dealloc_stack %2 : $*LinkParameter              // id: %101
+  %102 = enum $Optional<LinkParameter>, #Optional.none!enumelt // user: %103
+  br bb24(%102 : $Optional<LinkParameter>)        // id: %103
+
+// %104                                           // user: %105
+bb24(%104 : $Optional<LinkParameter>):            // Preds: bb22 bb23
+  return %104 : $Optional<LinkParameter>          // id: %105
+} // end sil function '$S14sample1_x86_6413LinkParameterO8rawValueACSgSS_tcfC'
+
+// _allocateUninitializedArray<A>(_:)
+sil [serialized] [always_inline] @$Ss27_allocateUninitializedArrayySayxG_BptBwlF : $@convention(thin) <τ_0_0> (Builtin.Word) -> (@owned Array<τ_0_0>, Builtin.RawPointer)
+
+// StaticString.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+sil public_external [transparent] [serialized] [readonly] @$Ss12StaticStringV08_builtinB7Literal17utf8CodeUnitCount7isASCIIABBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin StaticString.Type) -> StaticString {
+// %0                                             // user: %4
+// %1                                             // user: %13
+// %2                                             // user: %5
+bb0(%0 : $Builtin.RawPointer, %1 : $Builtin.Word, %2 : $Builtin.Int1, %3 : $@thin StaticString.Type):
+  %4 = builtin "ptrtoint_Word"(%0 : $Builtin.RawPointer) : $Builtin.Word // user: %13
+  %5 = struct $Bool (%2 : $Builtin.Int1)          // user: %6
+  %6 = struct_extract %5 : $Bool, #Bool._value    // user: %7
+  cond_br %6, bb2, bb1                            // id: %7
+
+bb1:                                              // Preds: bb0
+  %8 = integer_literal $Builtin.Int8, 0           // user: %9
+  br bb3(%8 : $Builtin.Int8)                      // id: %9
+
+bb2:                                              // Preds: bb0
+  %10 = integer_literal $Builtin.Int8, 2          // user: %11
+  br bb3(%10 : $Builtin.Int8)                     // id: %11
+
+// %12                                            // user: %13
+bb3(%12 : $Builtin.Int8):                         // Preds: bb2 bb1
+  %13 = struct $StaticString (%4 : $Builtin.Word, %1 : $Builtin.Word, %12 : $Builtin.Int8) // user: %15
+  br bb4                                          // id: %14
+
+bb4:                                              // Preds: bb3
+  return %13 : $StaticString                      // id: %15
+} // end sil function '$Ss12StaticStringV08_builtinB7Literal17utf8CodeUnitCount7isASCIIABBp_BwBi1_tcfC'
+
+// Array.init(arrayLiteral:)
+sil [serialized] @$SSa12arrayLiteralSayxGxd_tcfC : $@convention(method) <τ_0_0> (@owned Array<τ_0_0>, @thin Array<τ_0_0>.Type) -> @owned Array<τ_0_0>
+
+// _findStringSwitchCase(cases:string:)
+sil [_semantics "findStringSwitchCase"] @$Ss21_findStringSwitchCase5cases6stringSiSays06StaticB0VG_SStF : $@convention(thin) (@guaranteed Array<StaticString>, @guaranteed String) -> Int
+
+// ~= infix<A>(_:_:)
+sil public_external [transparent] [serialized] @$Ss2teoiySbx_xtSQRzlF : $@convention(thin) <T where T : Equatable> (@in_guaranteed T, @in_guaranteed T) -> Bool {
+// %0                                             // user: %4
+// %1                                             // user: %4
+bb0(%0 : $*T, %1 : $*T):
+  %2 = metatype $@thick T.Type                    // user: %4
+  %3 = witness_method $T, #Equatable."=="!1 : <Self where Self : Equatable> (Self.Type) -> (Self, Self) -> Bool : $@convention(witness_method: Equatable) <τ_0_0 where τ_0_0 : Equatable> (@in_guaranteed τ_0_0, @in_guaranteed τ_0_0, @thick τ_0_0.Type) -> Bool // user: %4
+  %4 = apply %3<T>(%0, %1, %2) : $@convention(witness_method: Equatable) <τ_0_0 where τ_0_0 : Equatable> (@in_guaranteed τ_0_0, @in_guaranteed τ_0_0, @thick τ_0_0.Type) -> Bool // user: %5
+  return %4 : $Bool                               // id: %5
+} // end sil function '$Ss2teoiySbx_xtSQRzlF'
+
+// Bool._getBuiltinLogicValue()
+sil public_external [transparent] [serialized] @$SSb21_getBuiltinLogicValueBi1_yF : $@convention(method) (Bool) -> Builtin.Int1 {
+// %0                                             // user: %1
+bb0(%0 : $Bool):
+  %1 = struct_extract %0 : $Bool, #Bool._value    // user: %2
+  return %1 : $Builtin.Int1                       // id: %2
+} // end sil function '$SSb21_getBuiltinLogicValueBi1_yF'
+
+// LinkParameter.rawValue.getter
+sil [serialized] @$S14sample1_x86_6413LinkParameterO8rawValueSSvg : $@convention(method) (LinkParameter) -> @owned String {
+// %0                                             // users: %2, %1
+bb0(%0 : $LinkParameter):
+  debug_value %0 : $LinkParameter, let, name "self", argno 1 // id: %1
+  switch_enum %0 : $LinkParameter, case #LinkParameter.val!enumelt: bb1, case #LinkParameter.type!enumelt: bb2, case #LinkParameter.rel!enumelt: bb3 // id: %2
+
+bb1:                                              // Preds: bb0
+  %3 = string_literal utf8 "val"                  // user: %8
+  %4 = integer_literal $Builtin.Word, 3           // user: %8
+  %5 = integer_literal $Builtin.Int1, -1          // user: %8
+  %6 = metatype $@thin String.Type                // user: %8
+  // function_ref String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+  %7 = function_ref @$SSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %8
+  %8 = apply %7(%3, %4, %5, %6) : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %9
+  br bb4(%8 : $String)                            // id: %9
+
+bb2:                                              // Preds: bb0
+  %10 = string_literal utf8 "type"                // user: %15
+  %11 = integer_literal $Builtin.Word, 4          // user: %15
+  %12 = integer_literal $Builtin.Int1, -1         // user: %15
+  %13 = metatype $@thin String.Type               // user: %15
+  // function_ref String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+  %14 = function_ref @$SSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %15
+  %15 = apply %14(%10, %11, %12, %13) : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %16
+  br bb4(%15 : $String)                           // id: %16
+
+bb3:                                              // Preds: bb0
+  %17 = string_literal utf8 "rel"                 // user: %22
+  %18 = integer_literal $Builtin.Word, 3          // user: %22
+  %19 = integer_literal $Builtin.Int1, -1         // user: %22
+  %20 = metatype $@thin String.Type               // user: %22
+  // function_ref String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+  %21 = function_ref @$SSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %22
+  %22 = apply %21(%17, %18, %19, %20) : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String // user: %23
+  br bb4(%22 : $String)                           // id: %23
+
+// %24                                            // user: %25
+bb4(%24 : $String):                               // Preds: bb3 bb2 bb1
+  return %24 : $String                            // id: %25
+} // end sil function '$S14sample1_x86_6413LinkParameterO8rawValueSSvg'
+
+// String.init(_builtinStringLiteral:utf8CodeUnitCount:isASCII:)
+sil [serialized] [always_inline] [readonly] [_semantics "string.makeUTF8"] @$SSS21_builtinStringLiteral17utf8CodeUnitCount7isASCIISSBp_BwBi1_tcfC : $@convention(method) (Builtin.RawPointer, Builtin.Word, Builtin.Int1, @thin String.Type) -> @owned String
+
+// protocol witness for static Equatable.== infix(_:_:) in conformance LinkParameter
+sil shared [transparent] [serialized] [thunk] @$S14sample1_x86_6413LinkParameterOSQAASQ2eeoiySbx_xtFZTW : $@convention(witness_method: Equatable) (@in_guaranteed LinkParameter, @in_guaranteed LinkParameter, @thick LinkParameter.Type) -> Bool {
+// %0                                             // user: %4
+// %1                                             // user: %4
+bb0(%0 : $*LinkParameter, %1 : $*LinkParameter, %2 : $@thick LinkParameter.Type):
+  // function_ref == infix<A>(_:_:)
+  %3 = function_ref @$Ss2eeoiySbx_xtSYRzSQ8RawValueRpzlF : $@convention(thin) <τ_0_0 where τ_0_0 : RawRepresentable, τ_0_0.RawValue : Equatable> (@in_guaranteed τ_0_0, @in_guaranteed τ_0_0) -> Bool // user: %4
+  %4 = apply %3<LinkParameter, String>(%0, %1) : $@convention(thin) <τ_0_0 where τ_0_0 : RawRepresentable, τ_0_0.RawValue : Equatable> (@in_guaranteed τ_0_0, @in_guaranteed τ_0_0) -> Bool // user: %5
+  return %4 : $Bool                               // id: %5
+} // end sil function '$S14sample1_x86_6413LinkParameterOSQAASQ2eeoiySbx_xtFZTW'
+
+// == infix<A>(_:_:)
+sil [serialized] @$Ss2eeoiySbx_xtSYRzSQ8RawValueRpzlF : $@convention(thin) <τ_0_0 where τ_0_0 : RawRepresentable, τ_0_0.RawValue : Equatable> (@in_guaranteed τ_0_0, @in_guaranteed τ_0_0) -> Bool
+
+// protocol witness for Hashable.hashValue.getter in conformance LinkParameter
+sil shared [transparent] [serialized] [thunk] @$S14sample1_x86_6413LinkParameterOSHAASH9hashValueSivgTW : $@convention(witness_method: Hashable) (@in_guaranteed LinkParameter) -> Int {
+// %0                                             // user: %1
+bb0(%0 : $*LinkParameter):
+  %1 = load %0 : $*LinkParameter                  // user: %3
+  // function_ref LinkParameter.hashValue.getter
+  %2 = function_ref @$S14sample1_x86_6413LinkParameterO9hashValueSivg : $@convention(method) (LinkParameter) -> Int // user: %3
+  %3 = apply %2(%1) : $@convention(method) (LinkParameter) -> Int // user: %4
+  return %3 : $Int                                // id: %4
+} // end sil function '$S14sample1_x86_6413LinkParameterOSHAASH9hashValueSivgTW'
+
+// protocol witness for Hashable.hash(into:) in conformance LinkParameter
+sil shared [transparent] [serialized] [thunk] @$S14sample1_x86_6413LinkParameterOSHAASH4hash4intoys6HasherVz_tFTW : $@convention(witness_method: Hashable) (@inout Hasher, @in_guaranteed LinkParameter) -> () {
+// %0                                             // user: %4
+// %1                                             // user: %2
+bb0(%0 : $*Hasher, %1 : $*LinkParameter):
+  %2 = load %1 : $*LinkParameter                  // user: %4
+  // function_ref LinkParameter.hash(into:)
+  %3 = function_ref @$S14sample1_x86_6413LinkParameterO4hash4intoys6HasherVz_tF : $@convention(method) (@inout Hasher, LinkParameter) -> () // user: %4
+  %4 = apply %3(%0, %2) : $@convention(method) (@inout Hasher, LinkParameter) -> ()
+  %5 = tuple ()                                   // user: %6
+  return %5 : $()                                 // id: %6
+} // end sil function '$S14sample1_x86_6413LinkParameterOSHAASH4hash4intoys6HasherVz_tFTW'
+
+// protocol witness for RawRepresentable.init(rawValue:) in conformance LinkParameter
+sil shared [transparent] [serialized] [thunk] @$S14sample1_x86_6413LinkParameterOSYAASY8rawValuexSg03RawF0Qz_tcfCTW : $@convention(witness_method: RawRepresentable) (@in String, @thick LinkParameter.Type) -> @out Optional<LinkParameter> {
+// %0                                             // user: %7
+// %1                                             // user: %3
+bb0(%0 : $*Optional<LinkParameter>, %1 : $*String, %2 : $@thick LinkParameter.Type):
+  %3 = load %1 : $*String                         // user: %6
+  %4 = metatype $@thin LinkParameter.Type         // user: %6
+  // function_ref LinkParameter.init(rawValue:)
+  %5 = function_ref @$S14sample1_x86_6413LinkParameterO8rawValueACSgSS_tcfC : $@convention(method) (@owned String, @thin LinkParameter.Type) -> Optional<LinkParameter> // user: %6
+  %6 = apply %5(%3, %4) : $@convention(method) (@owned String, @thin LinkParameter.Type) -> Optional<LinkParameter> // user: %7
+  store %6 to %0 : $*Optional<LinkParameter>      // id: %7
+  %8 = tuple ()                                   // user: %9
+  return %8 : $()                                 // id: %9
+} // end sil function '$S14sample1_x86_6413LinkParameterOSYAASY8rawValuexSg03RawF0Qz_tcfCTW'
+
+// protocol witness for RawRepresentable.rawValue.getter in conformance LinkParameter
+sil shared [transparent] [serialized] [thunk] @$S14sample1_x86_6413LinkParameterOSYAASY8rawValue03RawF0QzvgTW : $@convention(witness_method: RawRepresentable) (@in_guaranteed LinkParameter) -> @out String {
+// %0                                             // user: %5
+// %1                                             // user: %2
+bb0(%0 : $*String, %1 : $*LinkParameter):
+  %2 = load %1 : $*LinkParameter                  // user: %4
+  // function_ref LinkParameter.rawValue.getter
+  %3 = function_ref @$S14sample1_x86_6413LinkParameterO8rawValueSSvg : $@convention(method) (LinkParameter) -> @owned String // user: %4
+  %4 = apply %3(%2) : $@convention(method) (LinkParameter) -> @owned String // user: %5
+  store %4 to %0 : $*String                       // id: %5
+  %6 = tuple ()                                   // user: %7
+  return %6 : $()                                 // id: %7
+} // end sil function '$S14sample1_x86_6413LinkParameterOSYAASY8rawValue03RawF0QzvgTW'
+
+// Dictionary.init(dictionaryLiteral:)
+sil [serialized] [readonly] @$SSD17dictionaryLiteralSDyxq_Gx_q_td_tcfC : $@convention(method) <τ_0_0, τ_0_1 where τ_0_0 : Hashable> (@owned Array<(τ_0_0, τ_0_1)>, @thin Dictionary<τ_0_0, τ_0_1>.Type) -> @owned Dictionary<τ_0_0, τ_0_1>
+
+// Dictionary.makeIterator()
+sil [serialized] [always_inline] @$SSD12makeIterators010DictionaryB0Vyxq_GyF : $@convention(method) <τ_0_0, τ_0_1 where τ_0_0 : Hashable> (@guaranteed Dictionary<τ_0_0, τ_0_1>) -> @owned DictionaryIterator<τ_0_0, τ_0_1>
+
+// DictionaryIterator.next()
+sil [serialized] [always_inline] @$Ss18DictionaryIteratorV4nextx3key_q_5valuetSgyF : $@convention(method) <τ_0_0, τ_0_1 where τ_0_0 : Hashable> (@inout DictionaryIterator<τ_0_0, τ_0_1>) -> @out Optional<(key: τ_0_0, value: τ_0_1)>
+
+// protocol witness for static Equatable.== infix(_:_:) in conformance Int
+sil shared_external [transparent] [serialized] [thunk] @$SSiSQsSQ2eeoiySbx_xtFZTW : $@convention(witness_method: Equatable) (@in_guaranteed Int, @in_guaranteed Int, @thick Int.Type) -> Bool {
+// %0                                             // user: %3
+// %1                                             // user: %4
+bb0(%0 : $*Int, %1 : $*Int, %2 : $@thick Int.Type):
+  %3 = load %0 : $*Int                            // user: %5
+  %4 = load %1 : $*Int                            // user: %6
+  %5 = struct_extract %3 : $Int, #Int._value      // user: %7
+  %6 = struct_extract %4 : $Int, #Int._value      // user: %7
+  %7 = builtin "cmp_eq_Int64"(%5 : $Builtin.Int64, %6 : $Builtin.Int64) : $Builtin.Int1 // user: %8
+  %8 = struct $Bool (%7 : $Builtin.Int1)          // user: %9
+  return %8 : $Bool                               // id: %9
+} // end sil function '$SSiSQsSQ2eeoiySbx_xtFZTW'
+
+sil_witness_table [serialized] LinkParameter: Equatable module sample1_x86_64 {
+  method #Equatable."=="!1: <Self where Self : Equatable> (Self.Type) -> (Self, Self) -> Bool : @$S14sample1_x86_6413LinkParameterOSQAASQ2eeoiySbx_xtFZTW	// protocol witness for static Equatable.== infix(_:_:) in conformance LinkParameter
+}
+
+sil_witness_table [serialized] LinkParameter: Hashable module sample1_x86_64 {
+  base_protocol Equatable: LinkParameter: Equatable module sample1_x86_64
+  method #Hashable.hashValue!getter.1: <Self where Self : Hashable> (Self) -> () -> Int : @$S14sample1_x86_6413LinkParameterOSHAASH9hashValueSivgTW	// protocol witness for Hashable.hashValue.getter in conformance LinkParameter
+  method #Hashable.hash!1: <Self where Self : Hashable> (Self) -> (inout Hasher) -> () : @$S14sample1_x86_6413LinkParameterOSHAASH4hash4intoys6HasherVz_tFTW	// protocol witness for Hashable.hash(into:) in conformance LinkParameter
+}
+
+sil_witness_table [serialized] LinkParameter: RawRepresentable module sample1_x86_64 {
+  associated_type RawValue: String
+  method #RawRepresentable.init!allocator.1: <Self where Self : RawRepresentable> (Self.Type) -> (Self.RawValue) -> Self? : @$S14sample1_x86_6413LinkParameterOSYAASY8rawValuexSg03RawF0Qz_tcfCTW	// protocol witness for RawRepresentable.init(rawValue:) in conformance LinkParameter
+  method #RawRepresentable.rawValue!getter.1: <Self where Self : RawRepresentable> (Self) -> () -> Self.RawValue : @$S14sample1_x86_6413LinkParameterOSYAASY8rawValue03RawF0QzvgTW	// protocol witness for RawRepresentable.rawValue.getter in conformance LinkParameter
+}
+
+sil_witness_table public_external [serialized] Int: Equatable module Swift {
+  method #Equatable."=="!1: <Self where Self : Equatable> (Self.Type) -> (Self, Self) -> Bool : @$SSiSQsSQ2eeoiySbx_xtFZTW	// protocol witness for static Equatable.== infix(_:_:) in conformance Int
+}
+
+
+
