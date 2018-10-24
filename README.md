@@ -3,3 +3,5 @@
 `Sample1.swift` loops infinte on s390x;
 
 `Sample2.swift` loops once as expected on s390x
+
+Both samples work on x86_64
